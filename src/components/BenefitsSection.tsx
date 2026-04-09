@@ -1,4 +1,5 @@
 import { MessageSquare, Lightbulb, GraduationCap, Zap } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 const benefits = [
   { icon: MessageSquare, title: "Fale desde as primeiras aulas", desc: "Prática de conversação real desde o primeiro dia de curso." },
@@ -7,8 +8,10 @@ const benefits = [
   { icon: Zap, title: "Aprendizado rápido e eficiente", desc: "Resultados visíveis em menos tempo." },
 ];
 
-const BenefitsSection = () => (
-  <section id="beneficios" className="py-20 bg-section-alt">
+const BenefitsSection = () => {
+  const ref = useScrollAnimation();
+  return (
+  <section id="beneficios" className="py-20 bg-section-alt" ref={ref}>
     <div className="container">
       <h2 className="text-3xl md:text-4xl text-center mb-4">Por que escolher o <span className="text-primary">Language Now!</span>?</h2>
       <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">Descubra as vantagens que fazem do Language Now! a escolha certa para o seu aprendizado.</p>
@@ -25,6 +28,7 @@ const BenefitsSection = () => (
       </div>
     </div>
   </section>
-);
+  );
+};
 
 export default BenefitsSection;

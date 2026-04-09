@@ -1,7 +1,10 @@
 import { Globe, Users, Target, Award } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
-const AboutSection = () => (
-  <section id="sobre" className="py-20">
+const AboutSection = () => {
+  const ref = useScrollAnimation();
+  return (
+  <section id="sobre" className="py-20" ref={ref}>
     <div className="container grid md:grid-cols-2 gap-12 items-center">
       <div>
         <h2 className="text-3xl md:text-4xl mb-6">Sobre o <span className="text-primary">Language Now!</span></h2>
@@ -28,6 +31,7 @@ const AboutSection = () => (
       </div>
     </div>
   </section>
-);
+  );
+};
 
 export default AboutSection;
