@@ -6,6 +6,7 @@ import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 const ContactSection = () => {
   const [form, setForm] = useState({ name: "", email: "", whatsapp: "", idioma: "Inglês" });
   const [loading, setLoading] = useState(false);
+  const ref = useScrollAnimation();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
