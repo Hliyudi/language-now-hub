@@ -1,4 +1,5 @@
 import { Star } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 const testimonials = [
   { name: "Mariana Costa", role: "Aluna de Inglês", text: "Em poucos meses já conseguia manter conversas em inglês com confiança. A metodologia do Language Now! realmente funciona!" },
@@ -6,8 +7,10 @@ const testimonials = [
   { name: "Juliana Santos", role: "Aluna de Francês", text: "O Language Now! transformou meu aprendizado. Hoje leio e me comunico em francês com naturalidade!" },
 ];
 
-const TestimonialsSection = () => (
-  <section id="depoimentos" className="py-20 bg-section-alt">
+const TestimonialsSection = () => {
+  const ref = useScrollAnimation();
+  return (
+  <section id="depoimentos" className="py-20 bg-section-alt" ref={ref}>
     <div className="container">
       <h2 className="text-3xl md:text-4xl text-center mb-4">O que nossos <span className="text-primary">alunos</span> dizem</h2>
       <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">Histórias reais de quem já transformou sua vida com um novo idioma.</p>
@@ -34,6 +37,7 @@ const TestimonialsSection = () => (
       </div>
     </div>
   </section>
-);
+  );
+};
 
 export default TestimonialsSection;

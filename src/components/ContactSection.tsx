@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Phone, Mail, Send, MapPin } from "lucide-react";
 import { toast } from "sonner";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 const ContactSection = () => {
   const [form, setForm] = useState({ name: "", email: "", whatsapp: "", idioma: "Inglês" });
@@ -17,7 +18,7 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contato" className="py-20">
+    <section id="contato" className="py-20" ref={ref}>
       <div className="container grid md:grid-cols-2 gap-12">
         {/* Info */}
         <div className="space-y-6">

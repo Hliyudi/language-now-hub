@@ -1,4 +1,5 @@
 import { MessagesSquare, Sparkles, Monitor, UserCheck } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 const methods = [
   { icon: MessagesSquare, title: "Foco em conversação real", desc: "Você pratica diálogos reais desde o primeiro dia." },
@@ -7,8 +8,10 @@ const methods = [
   { icon: UserCheck, title: "Ensino personalizado", desc: "Ritmo e conteúdo adaptados às suas necessidades." },
 ];
 
-const MethodologySection = () => (
-  <section id="metodologia" className="py-20">
+const MethodologySection = () => {
+  const ref = useScrollAnimation();
+  return (
+  <section id="metodologia" className="py-20" ref={ref}>
     <div className="container">
       <h2 className="text-3xl md:text-4xl text-center mb-4">Nossa <span className="text-primary">Metodologia</span></h2>
       <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">Uma abordagem moderna que coloca você no centro do aprendizado.</p>
@@ -26,6 +29,7 @@ const MethodologySection = () => (
       </div>
     </div>
   </section>
-);
+  );
+};
 
 export default MethodologySection;

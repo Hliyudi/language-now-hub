@@ -1,3 +1,5 @@
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
+
 const courses = [
   { lang: "Inglês", flag: "🇺🇸", desc: "O idioma mais falado no mundo dos negócios e da tecnologia.", benefit: "Carreira & Tecnologia", color: "from-blue-500 to-blue-700" },
   { lang: "Espanhol", flag: "🇪🇸", desc: "Conecte-se com mais de 500 milhões de falantes nativos.", benefit: "Cultura & Viagem", color: "from-red-500 to-orange-500" },
@@ -6,8 +8,10 @@ const courses = [
   { lang: "Italiano", flag: "🇮🇹", desc: "Descubra a beleza da cultura italiana.", benefit: "Cultura & Gastronomia", color: "from-green-500 to-green-700" },
 ];
 
-const CoursesSection = () => (
-  <section id="cursos" className="py-20 bg-section-alt">
+const CoursesSection = () => {
+  const ref = useScrollAnimation();
+  return (
+  <section id="cursos" className="py-20 bg-section-alt" ref={ref}>
     <div className="container">
       <h2 className="text-3xl md:text-4xl text-center mb-4">Nossos <span className="text-primary">Cursos</span></h2>
       <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">Escolha o idioma ideal para os seus objetivos pessoais e profissionais.</p>
@@ -30,6 +34,7 @@ const CoursesSection = () => (
       </div>
     </div>
   </section>
-);
+  );
+};
 
 export default CoursesSection;
