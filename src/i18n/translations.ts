@@ -16,7 +16,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     "hero.highlight": "conecte-se",
     "hero.title2": " com o mundo!",
     "hero.subtitle": "No Language Now!, você aprende de forma prática, dinâmica e eficiente, com foco na comunicação real.",
-    "hero.cta": "Agende sua aula gratuita",
+    "hero.cta": "Entre em contato",
     "hero.cta2": "Fale com um consultor",
 
     // Benefits
@@ -133,7 +133,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     "hero.highlight": "connect",
     "hero.title2": " with the world!",
     "hero.subtitle": "At Language Now!, you learn in a practical, dynamic and efficient way, focused on real communication.",
-    "hero.cta": "Book your free class",
+    "hero.cta": "Get in touch",
     "hero.cta2": "Talk to a consultant",
 
     "benefits.title1": "Why choose ",
@@ -242,7 +242,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     "hero.highlight": "conéctate",
     "hero.title2": " con el mundo!",
     "hero.subtitle": "En Language Now!, aprendes de forma práctica, dinámica y eficiente, con enfoque en la comunicación real.",
-    "hero.cta": "Agenda tu clase gratuita",
+    "hero.cta": "Contáctanos",
     "hero.cta2": "Habla con un consultor",
 
     "benefits.title1": "¿Por qué elegir ",
