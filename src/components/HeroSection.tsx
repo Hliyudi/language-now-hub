@@ -14,10 +14,7 @@ const HeroSection = () => {
             </h1>
             <p className="text-lg md:text-xl opacity-90 max-w-lg">{t("hero.subtitle")}</p>
             <div className="flex flex-wrap gap-4">
-              <a href="#contato" className="bg-cta-gradient text-accent-foreground px-7 py-3 rounded-lg font-bold text-base hover:scale-105 transition-transform shadow-lg">
-                {t("hero.cta")}
-              </a>
-              <a href="https://wa.me/5511987654321" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 border-2 border-primary-foreground/40 text-primary-foreground px-7 py-3 rounded-lg font-semibold hover:bg-primary-foreground/10 transition-colors">
+              <a href="https://wa.me/5511987654321" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 bg-cta-gradient text-accent-foreground px-7 py-3 rounded-lg font-bold text-base hover:scale-105 transition-transform shadow-lg">
                 <MessageCircle size={18} /> {t("hero.cta2")}
               </a>
             </div>
