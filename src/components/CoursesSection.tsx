@@ -2,11 +2,9 @@ import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 const courseKeys = [
+  { key: "portugues", flag: "🇧🇷", color: "from-green-500 to-green-700" },
   { key: "ingles", flag: "🇺🇸", color: "from-blue-500 to-blue-700" },
-  { key: "espanhol", flag: "🇪🇸", color: "from-red-500 to-orange-500" },
-  { key: "frances", flag: "🇫🇷", color: "from-blue-600 to-indigo-600" },
-  { key: "alemao", flag: "🇩🇪", color: "from-gray-700 to-gray-900" },
-  { key: "italiano", flag: "🇮🇹", color: "from-green-500 to-green-700" },
+  { key: "mandarim", flag: "🇨🇳", color: "from-red-600 to-red-800" },
 ];
 
 const CoursesSection = () => {
