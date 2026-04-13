@@ -14,13 +14,13 @@ const HeroSection = () => {
             </h1>
             <p className="text-lg md:text-xl opacity-90 max-w-lg">{t("hero.subtitle")}</p>
             <div className="flex flex-wrap gap-4">
-              <a href="https://wa.me/5511987654321" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 bg-cta-gradient text-accent-foreground px-7 py-3 rounded-lg font-bold text-base hover:scale-105 transition-transform shadow-lg">
+              <a href="https://wa.me/50766778280" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 bg-cta-gradient text-accent-foreground px-7 py-3 rounded-lg font-bold text-base hover:scale-105 transition-transform shadow-lg">
                 <MessageCircle size={18} /> {t("hero.cta2")}
               </a>
             </div>
           </div>
           <div className="relative flex justify-center">
-            <img src={heroImage} alt="Estudantes aprendendo idiomas em ambiente multicultural" width={1280} height={720} className="rounded-2xl shadow-2xl object-cover max-h-[420px] w-full" />
+            <img src={heroImage} alt="Alunos aprendendo idiomas na escola LanguageNow no Panamá" width={1280} height={720} className="rounded-2xl shadow-2xl object-cover max-h-[420px] w-full" />
           </div>
         </div>
       </div>
