@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Phone, Mail, Send, MapPin } from "lucide-react";
+import { Phone, Mail, Send, MapPin, Clock } from "lucide-react";
 import { toast } from "sonner";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { useLanguage } from "@/i18n/LanguageContext";
@@ -28,12 +28,12 @@ const ContactSection = () => {
           <p className="text-muted-foreground">{t("contact.subtitle")}</p>
           <div className="space-y-4">
             {[
-              { icon: Phone, text: "(11) 98765-4321", href: "tel:+5511987654321" },
-              { icon: Mail, text: "contato@languagenow.com", href: "mailto:contato@languagenow.com" },
-              { icon: Send, text: "WhatsApp: (11) 98765-4321", href: "https://wa.me/5511987654321" },
-              { icon: MapPin, text: "@languagenow (Instagram & TikTok)", href: "https://instagram.com/languagenow" },
+              { icon: Phone, text: "+507 6677-8280", href: "tel:+50766778280" },
+              { icon: Mail, text: "sales@languagenowpa.com", href: "mailto:sales@languagenowpa.com" },
+              { icon: Send, text: "WhatsApp: +507 6677-8280", href: "https://wa.me/50766778280" },
+              { icon: Clock, text: "08:00 – 17:00 (Hora do Panamá)", href: "#" },
             ].map((c) => (
-              <a key={c.text} href={c.href} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors">
+              <a key={c.text} href={c.href} target={c.href.startsWith("http") ? "_blank" : undefined} rel="noopener noreferrer" className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors">
                 <c.icon size={20} className="text-primary" /> {c.text}
               </a>
             ))}

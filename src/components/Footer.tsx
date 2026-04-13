@@ -23,15 +23,16 @@ const Footer = () => {
         <div>
           <h4 className="font-bold text-background mb-3">{t("footer.social")}</h4>
           <div className="space-y-2 text-sm">
-            <a href="https://instagram.com/languagenow" target="_blank" rel="noopener noreferrer" className="block hover:text-accent transition-colors">Instagram: @languagenow</a>
-            <a href="https://tiktok.com/@languagenow" target="_blank" rel="noopener noreferrer" className="block hover:text-accent transition-colors">TikTok: @languagenow</a>
-            <a href="https://facebook.com/languagenow" target="_blank" rel="noopener noreferrer" className="block hover:text-accent transition-colors">Facebook: /languagenow</a>
-            <a href="https://wa.me/5511987654321" target="_blank" rel="noopener noreferrer" className="block hover:text-accent transition-colors">WhatsApp: (11) 98765-4321</a>
+            <a href="https://instagram.com/languagenowpa" target="_blank" rel="noopener noreferrer" className="block hover:text-accent transition-colors">Instagram: @languagenowpa</a>
+            <a href="https://tiktok.com/@languagenowpa" target="_blank" rel="noopener noreferrer" className="block hover:text-accent transition-colors">TikTok: @languagenowpa</a>
+            <a href="https://facebook.com/languagenowpa" target="_blank" rel="noopener noreferrer" className="block hover:text-accent transition-colors">Facebook: /languagenowpa</a>
+            <a href="https://linkedin.com/company/languagenowpa" target="_blank" rel="noopener noreferrer" className="block hover:text-accent transition-colors">LinkedIn: /languagenowpa</a>
+            <a href="https://wa.me/50766778280" target="_blank" rel="noopener noreferrer" className="block hover:text-accent transition-colors">WhatsApp: +507 6677-8280</a>
           </div>
         </div>
       </div>
       <div className="container mt-8 pt-6 border-t border-background/10 text-center text-sm opacity-60">
-        © {new Date().getFullYear()} Language Now! — {t("footer.rights")}
+        © {new Date().getFullYear()} LanguageNow! — {t("footer.rights")}
       </div>
     </footer>
   );
