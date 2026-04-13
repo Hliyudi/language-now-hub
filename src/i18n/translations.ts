@@ -78,10 +78,10 @@ export const translations: Record<Lang, Record<string, string>> = {
     "testimonial.1.role": "Aluna de Inglês",
     "testimonial.1.text": "Em poucas semanas já conseguia me comunicar em inglês no trabalho. A metodologia da LanguageNow! é realmente diferente!",
     "testimonial.2.name": "Rafael Oliveira",
-    "testimonial.2.role": "Aluno de Espanhol",
+    "testimonial.2.role": "Aluno de Mandarim",
     "testimonial.2.text": "Os professores são excelentes e as aulas super práticas. Sinto que evoluo a cada semana.",
     "testimonial.3.name": "Juliana Santos",
-    "testimonial.3.role": "Aluna de Francês",
+    "testimonial.3.role": "Aluna de Português",
     "testimonial.3.text": "A LanguageNow! transformou meu aprendizado. Hoje me comunico em francês com naturalidade e confiança!",
 
     // CTA
@@ -184,10 +184,10 @@ export const translations: Record<Lang, Record<string, string>> = {
     "testimonial.1.role": "English Student",
     "testimonial.1.text": "In just a few weeks I was already communicating in English at work. LanguageNow!'s methodology is truly different!",
     "testimonial.2.name": "Rafael Oliveira",
-    "testimonial.2.role": "Spanish Student",
+    "testimonial.2.role": "Mandarin Student",
     "testimonial.2.text": "The teachers are excellent and the classes are super practical. I feel like I'm improving every week.",
     "testimonial.3.name": "Juliana Santos",
-    "testimonial.3.role": "French Student",
+    "testimonial.3.role": "Portuguese Student",
     "testimonial.3.text": "LanguageNow! transformed my learning. Today I communicate in French naturally and confidently!",
 
     "cta.title1": "Ready to speak a ",
@@ -287,10 +287,10 @@ export const translations: Record<Lang, Record<string, string>> = {
     "testimonial.1.role": "Alumna de Inglés",
     "testimonial.1.text": "¡En pocas semanas ya me comunicaba en inglés en el trabajo. La metodología de LanguageNow! es realmente diferente!",
     "testimonial.2.name": "Rafael Oliveira",
-    "testimonial.2.role": "Alumno de Español",
+    "testimonial.2.role": "Alumno de Mandarín",
     "testimonial.2.text": "Los profesores son excelentes y las clases súper prácticas. Siento que mejoro cada semana.",
     "testimonial.3.name": "Juliana Santos",
-    "testimonial.3.role": "Alumna de Francés",
+    "testimonial.3.role": "Alumna de Portugués",
     "testimonial.3.text": "¡LanguageNow! transformó mi aprendizaje. Hoy me comunico en francés con naturalidad y confianza!",
 
     "cta.title1": "¿Listo para hablar un ",
