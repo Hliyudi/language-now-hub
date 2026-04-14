@@ -167,6 +167,45 @@ export const translations: Record<Lang, Record<string, string>> = {
     "footer.nav": "Navegação",
     "footer.social": "Redes Sociais",
     "footer.rights": "Todos os direitos reservados.",
+    "footer.privacy": "Política de Privacidade",
+    "footer.terms": "Termos de Uso",
+
+    // Courses – Portuguese
+    "courses.tab.portuguese": "Português",
+    "courses.tab.comingSoon": "Em breve",
+    "courses.pt.wa.message": "Olá! Gostaria de saber sobre o curso de português.",
+
+    // Privacy Policy
+    "privacy.intro.title": "1. Introdução",
+    "privacy.intro.text": "A LanguageNow! valoriza a sua privacidade. Esta política descreve como coletamos, usamos e protegemos suas informações pessoais ao utilizar nosso site e serviços.",
+    "privacy.collect.title": "2. Informações Coletadas",
+    "privacy.collect.text": "Coletamos informações fornecidas voluntariamente por você, como nome, e-mail e número de telefone ao entrar em contato conosco via WhatsApp ou formulários. Também podemos coletar dados de navegação automaticamente (cookies, IP, tipo de navegador).",
+    "privacy.use.title": "3. Uso das Informações",
+    "privacy.use.text": "Utilizamos suas informações para: responder suas solicitações, personalizar sua experiência, enviar comunicações relevantes sobre nossos cursos e melhorar continuamente nossos serviços.",
+    "privacy.share.title": "4. Compartilhamento",
+    "privacy.share.text": "Não vendemos, alugamos ou compartilhamos suas informações pessoais com terceiros, exceto quando necessário para a prestação de serviços (ex: plataformas de comunicação) ou por exigência legal.",
+    "privacy.cookies.title": "5. Cookies",
+    "privacy.cookies.text": "Nosso site pode utilizar cookies para melhorar sua experiência de navegação. Você pode configurar seu navegador para recusar cookies, mas isso pode afetar algumas funcionalidades do site.",
+    "privacy.rights.title": "6. Seus Direitos",
+    "privacy.rights.text": "Você tem o direito de acessar, corrigir ou solicitar a exclusão de seus dados pessoais a qualquer momento. Para exercer esses direitos, entre em contato conosco.",
+    "privacy.contact.title": "7. Contato",
+    "privacy.contact.text": "Para dúvidas sobre esta política, entre em contato pelo WhatsApp: +507 6677-8280 ou visite nosso site: languagenow.com",
+
+    // Terms of Use
+    "terms.intro.title": "1. Aceitação dos Termos",
+    "terms.intro.text": "Ao acessar e utilizar o site da LanguageNow!, você concorda com estes Termos de Uso. Se não concordar, por favor não utilize nossos serviços.",
+    "terms.services.title": "2. Serviços",
+    "terms.services.text": "A LanguageNow! oferece cursos de idiomas (Inglês e Mandarim) em modalidades individuais e em grupo. Os detalhes de cada programa, incluindo carga horária e conteúdo, estão disponíveis em nosso site.",
+    "terms.obligations.title": "3. Obrigações do Usuário",
+    "terms.obligations.text": "O usuário compromete-se a fornecer informações verdadeiras, utilizar o site de forma ética e não reproduzir conteúdos sem autorização prévia.",
+    "terms.ip.title": "4. Propriedade Intelectual",
+    "terms.ip.text": "Todo o conteúdo do site — incluindo textos, imagens, logotipos e materiais didáticos — é propriedade da LanguageNow! e está protegido por leis de propriedade intelectual.",
+    "terms.liability.title": "5. Limitação de Responsabilidade",
+    "terms.liability.text": "A LanguageNow! não se responsabiliza por interrupções temporárias do site, erros técnicos ou danos indiretos decorrentes do uso de nossos serviços online.",
+    "terms.changes.title": "6. Alterações",
+    "terms.changes.text": "Reservamo-nos o direito de atualizar estes termos a qualquer momento. Recomendamos que você os revise periodicamente.",
+    "terms.contact.title": "7. Contato",
+    "terms.contact.text": "Para dúvidas sobre estes termos, entre em contato pelo WhatsApp: +507 6677-8280.",
   },
 
   en: {
