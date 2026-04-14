@@ -1,38 +1,194 @@
+import { useState } from "react";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { useLanguage } from "@/i18n/LanguageContext";
+import { BookOpen, Users, GraduationCap, Star, ArrowRight, Baby, Footprints, PersonStanding } from "lucide-react";
 
-const courseKeys = [
-  { key: "portugues", flag: "🇧🇷", color: "from-green-500 to-green-700" },
-  { key: "ingles", flag: "🇺🇸", color: "from-blue-500 to-blue-700" },
-  { key: "mandarim", flag: "🇨🇳", color: "from-red-600 to-red-800" },
-];
+type Tab = "english" | "mandarin";
+type SubTab = "adults" | "kids";
 
 const CoursesSection = () => {
   const ref = useScrollAnimation();
   const { t } = useLanguage();
+  const [activeTab, setActiveTab] = useState<Tab>("english");
+  const [activeSubTab, setActiveSubTab] = useState<SubTab>("adults");
+
+  const kidPrograms = [
+    { key: "crawls", icon: Baby, age: "5–7", color: "from-sky-400 to-sky-600" },
+    { key: "steps", icon: Footprints, age: "8–10", color: "from-emerald-400 to-emerald-600" },
+    { key: "walks", icon: PersonStanding, age: "11–13", color: "from-amber-400 to-amber-600" },
+    { key: "runs", icon: GraduationCap, age: "14–16", color: "from-rose-400 to-rose-600" },
+  ];
 
   return (
     <section id="cursos" className="py-20 bg-section-alt" ref={ref}>
-      <div className="container">
-        <h2 className="text-3xl md:text-4xl text-center mb-4">{t("courses.title1")}<span className="text-primary">{t("courses.title2")}</span></h2>
-        <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">{t("courses.subtitle")}</p>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {courseKeys.map((c) => (
-            <div key={c.key} className="bg-card rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow border border-border group">
-              <div className={`bg-gradient-to-br ${c.color} p-6 text-center`}>
-                <span className="text-5xl">{c.flag}</span>
-                <h3 className="text-2xl font-bold mt-3 text-primary-foreground">{t(`course.${c.key}`)}</h3>
+      <div className="container max-w-5xl">
+        <h2 className="text-3xl md:text-4xl text-center mb-3">
+          {t("courses.title1")}
+          <span className="text-primary">{t("courses.title2")}</span>
+        </h2>
+        <p className="text-center text-muted-foreground mb-10 max-w-2xl mx-auto">
+          {t("courses.subtitle")}
+        </p>
+
+        {/* Main Tabs */}
+        <div className="flex justify-center gap-3 mb-8">
+          {(["english", "mandarin"] as Tab[]).map((tab) => (
+            <button
+              key={tab}
+              onClick={() => setActiveTab(tab)}
+              className={`px-6 py-3 rounded-lg font-semibold text-sm transition-all ${
+                activeTab === tab
+                  ? "bg-primary text-primary-foreground shadow-md"
+                  : "bg-card text-muted-foreground border border-border hover:border-primary/40"
+              }`}
+            >
+              {tab === "english" ? `🇺🇸 ${t("courses.tab.english")}` : `🇨🇳 ${t("courses.tab.mandarin")}`}
+            </button>
+          ))}
+        </div>
+
+        {/* English Content */}
+        {activeTab === "english" && (
+          <div className="space-y-8 animate-fade-in">
+            {/* Sub Tabs */}
+            <div className="flex justify-center gap-2">
+              {(["adults", "kids"] as SubTab[]).map((sub) => (
+                <button
+                  key={sub}
+                  onClick={() => setActiveSubTab(sub)}
+                  className={`px-5 py-2 rounded-full text-sm font-medium transition-all ${
+                    activeSubTab === sub
+                      ? "bg-primary/10 text-primary border border-primary/30"
+                      : "text-muted-foreground hover:text-foreground"
+                  }`}
+                >
+                  {sub === "adults" ? t("courses.sub.adults") : t("courses.sub.kids")}
+                </button>
+              ))}
+            </div>
+
+            {activeSubTab === "adults" && (
+              <div className="bg-card rounded-2xl border border-border shadow-sm overflow-hidden">
+                <div className="bg-gradient-to-br from-blue-500 to-blue-700 p-8 text-center">
+                  <span className="text-5xl">🇺🇸</span>
+                  <h3 className="text-2xl font-bold mt-3 text-white">{t("eng.adults.title")}</h3>
+                  <p className="text-blue-100 mt-2 text-sm max-w-lg mx-auto">{t("eng.adults.tagline")}</p>
+                </div>
+                <div className="p-6 md:p-8 space-y-6">
+                  <p className="text-muted-foreground leading-relaxed">{t("eng.adults.desc")}</p>
+
+                  <div className="grid sm:grid-cols-2 gap-4">
+                    {[1, 2, 3, 4].map((i) => (
+                      <div key={i} className="flex items-start gap-3 p-3 rounded-lg bg-muted/50">
+                        <Star size={18} className="text-primary mt-0.5 shrink-0" />
+                        <div>
+                          <span className="font-semibold text-sm">{t(`eng.adults.feat${i}.title`)}</span>
+                          <p className="text-xs text-muted-foreground mt-0.5">{t(`eng.adults.feat${i}.desc`)}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+
+                  <div className="bg-muted/30 rounded-xl p-5 border border-border">
+                    <h4 className="font-bold text-sm mb-3 flex items-center gap-2">
+                      <GraduationCap size={16} className="text-primary" />
+                      {t("eng.adults.results.title")}
+                    </h4>
+                    <div className="grid sm:grid-cols-2 gap-2">
+                      <p className="text-sm text-muted-foreground">✅ {t("eng.adults.result1")}</p>
+                      <p className="text-sm text-muted-foreground">✅ {t("eng.adults.result2")}</p>
+                      <p className="text-sm text-muted-foreground">✅ {t("eng.adults.result3")}</p>
+                      <p className="text-sm text-muted-foreground">✅ {t("eng.adults.result4")}</p>
+                    </div>
+                  </div>
+
+                  <div className="text-center">
+                    <a href="#contato" className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-lg font-semibold text-sm hover:opacity-90 transition-opacity">
+                      {t("courses.cta.start")} <ArrowRight size={16} />
+                    </a>
+                  </div>
+                </div>
               </div>
-              <div className="p-6 space-y-3">
-                <p className="text-sm text-muted-foreground">{t(`course.${c.key}.desc`)}</p>
-                <span className="inline-block bg-accent/20 text-accent-foreground text-xs font-semibold px-3 py-1 rounded-full">{t(`course.${c.key}.benefit`)}</span>
-                <div>
-                  <a href="#contato" className="inline-block mt-2 text-primary font-semibold text-sm hover:underline">{t("courses.cta")}</a>
+            )}
+
+            {activeSubTab === "kids" && (
+              <div className="space-y-6">
+                <p className="text-center text-muted-foreground text-sm max-w-xl mx-auto">{t("eng.kids.intro")}</p>
+                <div className="grid sm:grid-cols-2 gap-5">
+                  {kidPrograms.map((prog) => (
+                    <div key={prog.key} className="bg-card rounded-xl border border-border overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                      <div className={`bg-gradient-to-br ${prog.color} p-5 flex items-center gap-4`}>
+                        <prog.icon size={28} className="text-white" />
+                        <div>
+                          <h4 className="font-bold text-white">{t(`eng.kids.${prog.key}.title`)}</h4>
+                          <span className="text-white/80 text-xs">{prog.age} {t("eng.kids.years")}</span>
+                        </div>
+                      </div>
+                      <div className="p-5 space-y-3">
+                        <p className="text-sm text-muted-foreground">{t(`eng.kids.${prog.key}.desc`)}</p>
+                        <div className="space-y-1.5">
+                          <p className="text-xs text-muted-foreground">📚 {t(`eng.kids.${prog.key}.detail1`)}</p>
+                          <p className="text-xs text-muted-foreground">🎯 {t(`eng.kids.${prog.key}.detail2`)}</p>
+                          <p className="text-xs text-muted-foreground">📈 {t(`eng.kids.${prog.key}.detail3`)}</p>
+                        </div>
+                        <a href="#contato" className="inline-flex items-center gap-1 text-primary font-semibold text-sm hover:underline">
+                          {t("courses.cta.info")} <ArrowRight size={14} />
+                        </a>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+        )}
+
+        {/* Mandarin Content */}
+        {activeTab === "mandarin" && (
+          <div className="animate-fade-in">
+            <div className="bg-card rounded-2xl border border-border shadow-sm overflow-hidden">
+              <div className="bg-gradient-to-br from-red-600 to-red-800 p-8 text-center">
+                <span className="text-5xl">🇨🇳</span>
+                <h3 className="text-2xl font-bold mt-3 text-white">{t("mand.adults.title")}</h3>
+                <p className="text-red-100 mt-2 text-sm max-w-lg mx-auto">{t("mand.adults.tagline")}</p>
+              </div>
+              <div className="p-6 md:p-8 space-y-6">
+                <p className="text-muted-foreground leading-relaxed">{t("mand.adults.desc")}</p>
+
+                <div className="grid sm:grid-cols-2 gap-4">
+                  {[1, 2, 3, 4].map((i) => (
+                    <div key={i} className="flex items-start gap-3 p-3 rounded-lg bg-muted/50">
+                      <Star size={18} className="text-primary mt-0.5 shrink-0" />
+                      <div>
+                        <span className="font-semibold text-sm">{t(`mand.adults.feat${i}.title`)}</span>
+                        <p className="text-xs text-muted-foreground mt-0.5">{t(`mand.adults.feat${i}.desc`)}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="bg-muted/30 rounded-xl p-5 border border-border">
+                  <h4 className="font-bold text-sm mb-3 flex items-center gap-2">
+                    <GraduationCap size={16} className="text-primary" />
+                    {t("mand.adults.results.title")}
+                  </h4>
+                  <div className="grid sm:grid-cols-2 gap-2">
+                    <p className="text-sm text-muted-foreground">✅ {t("mand.adults.result1")}</p>
+                    <p className="text-sm text-muted-foreground">✅ {t("mand.adults.result2")}</p>
+                    <p className="text-sm text-muted-foreground">✅ {t("mand.adults.result3")}</p>
+                    <p className="text-sm text-muted-foreground">✅ {t("mand.adults.result4")}</p>
+                  </div>
+                </div>
+
+                <div className="text-center">
+                  <a href="#contato" className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-lg font-semibold text-sm hover:opacity-90 transition-opacity">
+                    {t("courses.cta.start")} <ArrowRight size={16} />
+                  </a>
                 </div>
               </div>
             </div>
-          ))}
-        </div>
+          </div>
+        )}
       </div>
     </section>
   );
