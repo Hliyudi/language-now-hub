@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { useLanguage } from "@/i18n/LanguageContext";
-import { BookOpen, Users, GraduationCap, Star, ArrowRight, Baby, Footprints, PersonStanding } from "lucide-react";
+import { GraduationCap, Star, ArrowRight, Baby, Footprints, PersonStanding, Clock } from "lucide-react";
 
-type Tab = "english" | "mandarin";
+type Tab = "english" | "mandarin" | "portuguese";
 type SubTab = "adults" | "kids";
 
 const CoursesSection = () => {
@@ -19,6 +19,19 @@ const CoursesSection = () => {
     { key: "runs", icon: GraduationCap, age: "14–16", color: "from-rose-400 to-rose-600" },
   ];
 
+  const tabs: { key: Tab; emoji: string; labelKey: string; comingSoon?: boolean }[] = [
+    { key: "english", emoji: "🇺🇸", labelKey: "courses.tab.english" },
+    { key: "mandarin", emoji: "🇨🇳", labelKey: "courses.tab.mandarin" },
+    { key: "portuguese", emoji: "🇧🇷", labelKey: "courses.tab.portuguese", comingSoon: true },
+  ];
+
+  const handleTabClick = (tab: Tab) => {
+    if (tab === "portuguese") return;
+    setActiveTab(tab);
+  };
+
+  const whatsappPortuguese = `https://wa.me/50766778280?text=${encodeURIComponent(t("courses.pt.wa.message"))}`;
+
   return (
     <section id="cursos" className="py-20 bg-section-alt" ref={ref}>
       <div className="container max-w-5xl">
@@ -31,26 +44,41 @@ const CoursesSection = () => {
         </p>
 
         {/* Main Tabs */}
-        <div className="flex justify-center gap-3 mb-8">
-          {(["english", "mandarin"] as Tab[]).map((tab) => (
-            <button
-              key={tab}
-              onClick={() => setActiveTab(tab)}
-              className={`px-6 py-3 rounded-lg font-semibold text-sm transition-all ${
-                activeTab === tab
-                  ? "bg-primary text-primary-foreground shadow-md"
-                  : "bg-card text-muted-foreground border border-border hover:border-primary/40"
-              }`}
-            >
-              {tab === "english" ? `🇺🇸 ${t("courses.tab.english")}` : `🇨🇳 ${t("courses.tab.mandarin")}`}
-            </button>
+        <div className="flex flex-wrap justify-center gap-3 mb-8">
+          {tabs.map((tab) => (
+            <div key={tab.key} className="relative">
+              {tab.comingSoon ? (
+                <a
+                  href={whatsappPortuguese}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative px-8 py-4 rounded-xl font-bold text-base transition-all bg-card text-muted-foreground/60 border-2 border-dashed border-border hover:border-primary/30 cursor-pointer block"
+                >
+                  <span className="absolute -top-2.5 left-1/2 -translate-x-1/2 bg-accent text-accent-foreground text-[10px] font-bold px-2.5 py-0.5 rounded-full flex items-center gap-1">
+                    <Clock size={10} />
+                    {t("courses.tab.comingSoon")}
+                  </span>
+                  {tab.emoji} {t(tab.labelKey)}
+                </a>
+              ) : (
+                <button
+                  onClick={() => handleTabClick(tab.key)}
+                  className={`px-8 py-4 rounded-xl font-bold text-base transition-all ${
+                    activeTab === tab.key
+                      ? "bg-primary text-primary-foreground shadow-lg shadow-primary/25 scale-[1.02]"
+                      : "bg-card text-muted-foreground border-2 border-border hover:border-primary/40 hover:shadow-md"
+                  }`}
+                >
+                  {tab.emoji} {t(tab.labelKey)}
+                </button>
+              )}
+            </div>
           ))}
         </div>
 
         {/* English Content */}
         {activeTab === "english" && (
           <div className="space-y-8 animate-fade-in">
-            {/* Sub Tabs */}
             <div className="flex justify-center gap-2">
               {(["adults", "kids"] as SubTab[]).map((sub) => (
                 <button
@@ -76,7 +104,6 @@ const CoursesSection = () => {
                 </div>
                 <div className="p-6 md:p-8 space-y-6">
                   <p className="text-muted-foreground leading-relaxed">{t("eng.adults.desc")}</p>
-
                   <div className="grid sm:grid-cols-2 gap-4">
                     {[1, 2, 3, 4].map((i) => (
                       <div key={i} className="flex items-start gap-3 p-3 rounded-lg bg-muted/50">
@@ -88,7 +115,6 @@ const CoursesSection = () => {
                       </div>
                     ))}
                   </div>
-
                   <div className="bg-muted/30 rounded-xl p-5 border border-border">
                     <h4 className="font-bold text-sm mb-3 flex items-center gap-2">
                       <GraduationCap size={16} className="text-primary" />
@@ -101,7 +127,6 @@ const CoursesSection = () => {
                       <p className="text-sm text-muted-foreground">✅ {t("eng.adults.result4")}</p>
                     </div>
                   </div>
-
                   <div className="text-center">
                     <a href="#contato" className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-lg font-semibold text-sm hover:opacity-90 transition-opacity">
                       {t("courses.cta.start")} <ArrowRight size={16} />
@@ -156,7 +181,6 @@ const CoursesSection = () => {
               </div>
               <div className="p-6 md:p-8 space-y-6">
                 <p className="text-muted-foreground leading-relaxed">{t("mand.adults.desc")}</p>
-
                 <div className="grid sm:grid-cols-2 gap-4">
                   {[1, 2, 3, 4].map((i) => (
                     <div key={i} className="flex items-start gap-3 p-3 rounded-lg bg-muted/50">
@@ -168,7 +192,6 @@ const CoursesSection = () => {
                     </div>
                   ))}
                 </div>
-
                 <div className="bg-muted/30 rounded-xl p-5 border border-border">
                   <h4 className="font-bold text-sm mb-3 flex items-center gap-2">
                     <GraduationCap size={16} className="text-primary" />
@@ -181,7 +204,6 @@ const CoursesSection = () => {
                     <p className="text-sm text-muted-foreground">✅ {t("mand.adults.result4")}</p>
                   </div>
                 </div>
-
                 <div className="text-center">
                   <a href="#contato" className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-lg font-semibold text-sm hover:opacity-90 transition-opacity">
                     {t("courses.cta.start")} <ArrowRight size={16} />
