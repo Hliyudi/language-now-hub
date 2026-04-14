@@ -55,7 +55,7 @@ const ContactSection = () => {
           <div>
             <label className="block text-sm font-medium mb-1">{t("contact.form.idioma")}</label>
             <select value={form.idioma} onChange={(e) => setForm((p) => ({ ...p, idioma: e.target.value }))} className="w-full px-4 py-2.5 rounded-lg border border-input bg-background text-foreground focus:ring-2 focus:ring-ring outline-none transition">
-              {["Português", "Inglês", "Mandarim"].map((i) => (
+              {["Inglês", "Mandarim"].map((i) => (
                 <option key={i}>{i}</option>
               ))}
             </select>
