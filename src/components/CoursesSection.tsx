@@ -131,12 +131,14 @@ const CoursesSection = () => {
                           <p className="text-xs text-muted-foreground">🎯 {t(`eng.kids.${prog.key}.detail2`)}</p>
                           <p className="text-xs text-muted-foreground">📈 {t(`eng.kids.${prog.key}.detail3`)}</p>
                         </div>
-                        <a href="#contato" className="inline-flex items-center gap-1 text-primary font-semibold text-sm hover:underline">
-                          {t("courses.cta.info")} <ArrowRight size={14} />
-                        </a>
                       </div>
                     </div>
                   ))}
+                </div>
+                <div className="text-center pt-2">
+                  <a href="#contato" className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-lg font-semibold text-sm hover:opacity-90 transition-opacity">
+                    {t("courses.cta.info")} <ArrowRight size={16} />
+                  </a>
                 </div>
               </div>
             )}
