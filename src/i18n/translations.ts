@@ -152,8 +152,8 @@ export const translations: Record<Lang, Record<string, string>> = {
     "cta.button": "Comece agora",
 
     // Contact
-    "contact.headline1": "Pronto para dar o ",
-    "contact.headline2": "próximo passo?",
+    "contact.headline1": "Ficou alguma dúvida? ",
+    "contact.headline2": "Entre em contato",
     "contact.subheadline": "Converse diretamente com nossa equipe e receba orientação personalizada em poucos minutos. Sem burocracia.",
     "contact.cta": "Falar no WhatsApp",
     "contact.wa.message": "Olá! Gostaria de saber mais sobre os cursos da LanguageNow.",
@@ -347,8 +347,8 @@ export const translations: Record<Lang, Record<string, string>> = {
     "cta.subtitle": "Take the first step towards fluency. Talk to our team and discover the ideal plan for you.",
     "cta.button": "Start now",
 
-    "contact.headline1": "Ready to take the ",
-    "contact.headline2": "next step?",
+    "contact.headline1": "Have any questions? ",
+    "contact.headline2": "Get in touch",
     "contact.subheadline": "Chat directly with our team and get personalized guidance in minutes. No hassle.",
     "contact.cta": "Chat on WhatsApp",
     "contact.wa.message": "Hi! I'd like to learn more about LanguageNow courses.",
@@ -538,8 +538,8 @@ export const translations: Record<Lang, Record<string, string>> = {
     "cta.subtitle": "Da el primer paso hacia la fluidez. Habla con nuestro equipo y descubre el plan ideal para ti.",
     "cta.button": "Empieza ahora",
 
-    "contact.headline1": "¿Listo para dar el ",
-    "contact.headline2": "siguiente paso?",
+    "contact.headline1": "¿Tienes alguna duda? ",
+    "contact.headline2": "Contáctanos",
     "contact.subheadline": "Habla directamente con nuestro equipo y recibe orientación personalizada en minutos. Sin burocracia.",
     "contact.cta": "Hablar por WhatsApp",
     "contact.wa.message": "¡Hola! Me gustaría saber más sobre los cursos de LanguageNow.",
