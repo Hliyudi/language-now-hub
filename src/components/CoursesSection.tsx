@@ -48,18 +48,15 @@ const CoursesSection = () => {
           {tabs.map((tab) => (
             <div key={tab.key} className="relative">
               {tab.comingSoon ? (
-                <a
-                  href={whatsappPortuguese}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="relative px-8 py-4 rounded-xl font-bold text-base transition-all bg-card text-muted-foreground/60 border-2 border-dashed border-border hover:border-primary/30 cursor-pointer block"
+                <div
+                  className="relative px-8 py-4 rounded-xl font-bold text-base bg-card text-muted-foreground/40 border-2 border-dashed border-border cursor-not-allowed opacity-70 select-none"
                 >
-                  <span className="absolute -top-2.5 left-1/2 -translate-x-1/2 bg-accent text-accent-foreground text-[10px] font-bold px-2.5 py-0.5 rounded-full flex items-center gap-1">
+                  <span className="absolute -top-2.5 left-1/2 -translate-x-1/2 bg-accent text-accent-foreground text-[10px] font-bold px-2.5 py-0.5 rounded-full flex items-center gap-1 whitespace-nowrap">
                     <Clock size={10} />
                     {t("courses.tab.comingSoon")}
                   </span>
                   {tab.emoji} {t(tab.labelKey)}
-                </a>
+                </div>
               ) : (
                 <button
                   onClick={() => handleTabClick(tab.key)}
