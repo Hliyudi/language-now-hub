@@ -20,7 +20,7 @@ const HeroSection = () => {
             </div>
           </div>
           <div className="relative flex justify-center">
-            <img src={heroImage} alt="Alunos aprendendo idiomas na escola LanguageNow no Panamá" width={1280} height={720} className="rounded-2xl shadow-2xl object-cover max-h-[420px] w-full" />
+            <img src={heroImage} alt="Alunos aprendendo idiomas online na escola internacional LanguageNow" width={1280} height={720} className="rounded-2xl shadow-2xl object-cover max-h-[420px] w-full" />
           </div>
         </div>
       </div>
