@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { useLanguage } from "@/i18n/LanguageContext";
-import { GraduationCap, Star, ArrowRight, Baby, Footprints, PersonStanding, Clock } from "lucide-react";
+import { GraduationCap, Star, ArrowRight, Baby, Footprints, PersonStanding, Clock, CheckCircle2, BookOpen, Target, TrendingUp } from "lucide-react";
 
 type Tab = "english" | "mandarin" | "portuguese";
 type SubTab = "adults" | "kids";
@@ -118,10 +118,12 @@ const CoursesSection = () => {
                       {t("eng.adults.results.title")}
                     </h4>
                     <div className="grid sm:grid-cols-2 gap-2">
-                      <p className="text-sm text-muted-foreground">✅ {t("eng.adults.result1")}</p>
-                      <p className="text-sm text-muted-foreground">✅ {t("eng.adults.result2")}</p>
-                      <p className="text-sm text-muted-foreground">✅ {t("eng.adults.result3")}</p>
-                      <p className="text-sm text-muted-foreground">✅ {t("eng.adults.result4")}</p>
+                      {[1, 2, 3, 4].map((i) => (
+                        <p key={i} className="text-sm text-muted-foreground flex items-start gap-2">
+                          <CheckCircle2 size={16} className="text-primary mt-0.5 shrink-0" strokeWidth={2} />
+                          <span>{t(`eng.adults.result${i}`)}</span>
+                        </p>
+                      ))}
                     </div>
                   </div>
                   <div className="text-center">
@@ -148,10 +150,19 @@ const CoursesSection = () => {
                       </div>
                       <div className="p-5 space-y-3">
                         <p className="text-sm text-muted-foreground">{t(`eng.kids.${prog.key}.desc`)}</p>
-                        <div className="space-y-1.5">
-                          <p className="text-xs text-muted-foreground">📚 {t(`eng.kids.${prog.key}.detail1`)}</p>
-                          <p className="text-xs text-muted-foreground">🎯 {t(`eng.kids.${prog.key}.detail2`)}</p>
-                          <p className="text-xs text-muted-foreground">📈 {t(`eng.kids.${prog.key}.detail3`)}</p>
+                        <div className="space-y-2">
+                          <p className="text-xs text-muted-foreground flex items-start gap-2">
+                            <BookOpen size={14} className="text-primary mt-0.5 shrink-0" strokeWidth={2} />
+                            <span>{t(`eng.kids.${prog.key}.detail1`)}</span>
+                          </p>
+                          <p className="text-xs text-muted-foreground flex items-start gap-2">
+                            <Target size={14} className="text-primary mt-0.5 shrink-0" strokeWidth={2} />
+                            <span>{t(`eng.kids.${prog.key}.detail2`)}</span>
+                          </p>
+                          <p className="text-xs text-muted-foreground flex items-start gap-2">
+                            <TrendingUp size={14} className="text-primary mt-0.5 shrink-0" strokeWidth={2} />
+                            <span>{t(`eng.kids.${prog.key}.detail3`)}</span>
+                          </p>
                         </div>
                       </div>
                     </div>
@@ -195,10 +206,12 @@ const CoursesSection = () => {
                     {t("mand.adults.results.title")}
                   </h4>
                   <div className="grid sm:grid-cols-2 gap-2">
-                    <p className="text-sm text-muted-foreground">✅ {t("mand.adults.result1")}</p>
-                    <p className="text-sm text-muted-foreground">✅ {t("mand.adults.result2")}</p>
-                    <p className="text-sm text-muted-foreground">✅ {t("mand.adults.result3")}</p>
-                    <p className="text-sm text-muted-foreground">✅ {t("mand.adults.result4")}</p>
+                    {[1, 2, 3, 4].map((i) => (
+                      <p key={i} className="text-sm text-muted-foreground flex items-start gap-2">
+                        <CheckCircle2 size={16} className="text-primary mt-0.5 shrink-0" strokeWidth={2} />
+                        <span>{t(`mand.adults.result${i}`)}</span>
+                      </p>
+                    ))}
                   </div>
                 </div>
                 <div className="text-center">
