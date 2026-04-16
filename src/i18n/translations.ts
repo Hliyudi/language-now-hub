@@ -41,9 +41,9 @@ export const translations: Record<Lang, Record<string, string>> = {
     "about.p1": "A LanguageNow! foi criada para oferecer ensino de idiomas premium e acessível em um ambiente global. Nossa missão é desenvolver fluência e confiança em um contexto internacional, preparando você para se comunicar com naturalidade em qualquer cenário.",
     "about.p2": "Com foco em resultados reais e comunicação prática, nossa equipe de profissionais experientes garante uma experiência de aprendizado adaptada totalmente à sua rotina e aos seus objetivos.",
     "about.stat1": "Idiomas especializados",
-    "about.stat2": "Alunos satisfeitos",
+    "about.stat2": "Aulas com sucesso",
     "about.stat3": "Taxa de satisfação",
-    "about.stat4": "Anos de experiência",
+    "about.stat4": "Anos de experiência dos professores",
 
     // Courses – General
     "courses.title1": "Programas de ",
@@ -240,9 +240,9 @@ export const translations: Record<Lang, Record<string, string>> = {
     "about.p1": "LanguageNow! was created to offer premium, accessible language education in a global environment. Our mission is to develop fluency and confidence in an international context, preparing you to communicate naturally in any scenario.",
     "about.p2": "Focused on real results and practical communication, our team of experienced professionals delivers a learning experience fully adapted to your routine and goals.",
     "about.stat1": "Specialized languages",
-    "about.stat2": "Satisfied students",
+    "about.stat2": "Successful classes",
     "about.stat3": "Satisfaction rate",
-    "about.stat4": "Years of experience",
+    "about.stat4": "Years of teacher experience",
 
     // Courses – General
     "courses.title1": "Language ",
@@ -431,9 +431,9 @@ export const translations: Record<Lang, Record<string, string>> = {
     "about.p1": "LanguageNow! fue creada para ofrecer enseñanza de idiomas premium y accesible en un ambiente global. Nuestra misión es desarrollar fluidez y confianza en un contexto internacional, preparándote para comunicarte con naturalidad en cualquier escenario.",
     "about.p2": "Con enfoque en resultados reales y comunicación práctica, nuestro equipo de profesionales experimentados garantiza una experiencia de aprendizaje adaptada totalmente a tu rutina y objetivos.",
     "about.stat1": "Idiomas especializados",
-    "about.stat2": "Alumnos satisfechos",
+    "about.stat2": "Clases con éxito",
     "about.stat3": "Tasa de satisfacción",
-    "about.stat4": "Años de experiencia",
+    "about.stat4": "Años de experiencia de los profesores",
 
     // Courses – General
     "courses.title1": "Programas de ",

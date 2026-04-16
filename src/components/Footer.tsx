@@ -32,7 +32,7 @@ const Footer = () => {
             <div className="space-y-2 text-sm">
               <a href="https://instagram.com/languagenowpa" target="_blank" rel="noopener noreferrer" className="block hover:text-accent transition-colors">Instagram: @languagenowpa</a>
               <a href="https://tiktok.com/@languagenowpa" target="_blank" rel="noopener noreferrer" className="block hover:text-accent transition-colors">TikTok: @languagenowpa</a>
-              <a href="https://facebook.com/languagenowpa" target="_blank" rel="noopener noreferrer" className="block hover:text-accent transition-colors">Facebook: /languagenowpa</a>
+              
               <a href="https://linkedin.com/company/languagenowpa" target="_blank" rel="noopener noreferrer" className="block hover:text-accent transition-colors">LinkedIn: /languagenowpa</a>
               <a href="https://wa.me/50766778280" target="_blank" rel="noopener noreferrer" className="block hover:text-accent transition-colors">WhatsApp: +507 6677-8280</a>
             </div>

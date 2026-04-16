@@ -8,9 +8,9 @@ const AboutSection = () => {
 
   const stats = [
     { icon: Globe, value: "3", label: t("about.stat1") },
-    { icon: Users, value: "2.000+", label: t("about.stat2") },
+    { icon: Users, value: "+2000", label: t("about.stat2") },
     { icon: Target, value: "95%", label: t("about.stat3") },
-    { icon: Award, value: "10+", label: t("about.stat4") },
+    { icon: Award, value: "+10", label: t("about.stat4") },
   ];
 
   return (
