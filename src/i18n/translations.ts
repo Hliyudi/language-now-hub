@@ -41,9 +41,9 @@ export const translations: Record<Lang, Record<string, string>> = {
     "about.p1": "A LanguageNow! foi criada para oferecer ensino de idiomas premium e acessível em um ambiente global. Nossa missão é desenvolver fluência e confiança em um contexto internacional, preparando você para se comunicar com naturalidade em qualquer cenário.",
     "about.p2": "Com foco em resultados reais e comunicação prática, nossa equipe de profissionais experientes garante uma experiência de aprendizado adaptada totalmente à sua rotina e aos seus objetivos.",
     "about.stat1": "Idiomas especializados",
-    "about.stat2": "Alunos satisfeitos",
+    "about.stat2": "Aulas com sucesso",
     "about.stat3": "Taxa de satisfação",
-    "about.stat4": "Anos de experiência",
+    "about.stat4": "Anos de experiência dos professores",
 
     // Courses – General
     "courses.title1": "Programas de ",
