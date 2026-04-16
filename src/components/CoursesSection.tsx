@@ -49,7 +49,7 @@ const CoursesSection = () => {
             <div key={tab.key} className="relative">
               {tab.comingSoon ? (
                 <div
-                  className="relative px-8 py-4 rounded-xl font-bold text-base bg-card text-muted-foreground/40 border-2 border-dashed border-border cursor-not-allowed opacity-70 select-none"
+                  className="relative px-11 py-6 rounded-xl font-bold text-lg bg-card text-muted-foreground/40 border-2 border-dashed border-border cursor-not-allowed opacity-70 select-none"
                 >
                   <span className="absolute -top-2.5 left-1/2 -translate-x-1/2 bg-accent text-accent-foreground text-[10px] font-bold px-2.5 py-0.5 rounded-full flex items-center gap-1 whitespace-nowrap">
                     <Clock size={10} />
@@ -60,7 +60,7 @@ const CoursesSection = () => {
               ) : (
                 <button
                   onClick={() => handleTabClick(tab.key)}
-                  className={`px-8 py-4 rounded-xl font-bold text-base transition-all ${
+                  className={`px-11 py-6 rounded-xl font-bold text-lg transition-all ${
                     activeTab === tab.key
                       ? "bg-primary text-primary-foreground shadow-lg shadow-primary/25 scale-[1.02]"
                       : "bg-card text-muted-foreground border-2 border-border hover:border-primary/40 hover:shadow-md"
