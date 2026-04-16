@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Menu, X, Globe } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 import type { Lang } from "@/i18n/translations";
+import logo from "@/assets/logo.png";
 
 const navKeys = [
   { key: "nav.inicio", href: "#inicio" },
@@ -39,8 +40,8 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-card/90 backdrop-blur-md border-b border-border">
       <div className="container flex items-center justify-between h-16">
-        <a href="#inicio" className="text-xl font-heading font-extrabold text-primary">
-          Language <span className="text-accent">Now!</span>
+        <a href="#inicio" className="flex items-center" aria-label="LanguageNow!">
+          <img src={logo} alt="LanguageNow!" className="h-10 md:h-12 w-auto" />
         </a>
 
         {/* Desktop */}
