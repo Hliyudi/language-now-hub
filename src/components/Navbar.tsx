@@ -39,9 +39,13 @@ const Navbar = () => {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-card/90 backdrop-blur-md border-b border-border">
-      <div className="container flex items-center justify-between h-16">
+      <div className="container flex items-center justify-between h-20 md:h-24">
         <a href="#inicio" className="flex items-center" aria-label="LanguageNow!">
-          <img src={logo} alt="LanguageNow!" className="h-10 md:h-12 w-auto" />
+          <img
+            src={logo}
+            alt="LanguageNow!"
+            style={{ height: "clamp(45px, 6vw, 65px)", width: "auto", maxHeight: "none" }}
+          />
         </a>
 
         {/* Desktop */}
