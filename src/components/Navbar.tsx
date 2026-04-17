@@ -39,13 +39,13 @@ const Navbar = () => {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-card/90 backdrop-blur-md border-b border-border">
-      <div className="container flex items-center justify-between min-h-[90px] md:min-h-[110px] py-2">
-        <a href="#inicio" className="flex items-center shrink-0" aria-label="LanguageNow!">
+      <div className="container flex items-center justify-between min-h-[80px] md:min-h-[96px] py-2">
+        <a href="#inicio" className="logo flex items-center shrink-0 overflow-visible" aria-label="LanguageNow!">
           <img
             src={logo}
             alt="LanguageNow!"
-            className="w-auto"
-            style={{ height: "70px", maxHeight: "none", width: "auto" }}
+            className="w-auto max-w-none"
+            style={{ height: "clamp(50px, 7.8vw, 75px)", maxHeight: "none", width: "auto" }}
           />
         </a>
 
