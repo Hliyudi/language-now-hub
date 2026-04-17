@@ -38,28 +38,39 @@ const Navbar = () => {
   const [langOpen, setLangOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-card/90 backdrop-blur-md border-b border-border">
-      <div className="container flex items-center justify-between min-h-[80px] md:min-h-[96px] py-2">
+    <nav
+      className="fixed top-0 left-0 right-0 z-50 backdrop-blur-[10px]"
+      style={{
+        background: "rgba(255,255,255,0.8)",
+        borderBottom: "1px solid rgba(0,0,0,0.06)",
+      }}
+    >
+      <div className="container flex items-center justify-between min-h-[80px] md:min-h-[90px] py-2 md:px-10">
         <a href="#inicio" className="logo flex items-center shrink-0 overflow-visible" aria-label="LanguageNow!">
           <img
             src={logo}
             alt="LanguageNow!"
             className="w-auto max-w-none"
-            style={{ height: "clamp(50px, 7.8vw, 75px)", maxHeight: "none", width: "auto" }}
+            style={{ height: "clamp(50px, 6.5vw, 65px)", maxHeight: "none", width: "auto" }}
           />
         </a>
 
         {/* Desktop */}
-        <div className="hidden md:flex items-center gap-6">
+        <div className="hidden md:flex items-center" style={{ gap: "28px" }}>
           {navKeys.map((l) => (
-            <a key={l.href} href={l.href} className="text-sm font-medium text-foreground/70 hover:text-primary transition-colors">
+            <a
+              key={l.href}
+              href={l.href}
+              className="text-sm hover:text-primary transition-colors"
+              style={{ fontWeight: 500, color: "#1f2937" }}
+            >
               {t(l.key)}
             </a>
           ))}
         </div>
 
         {/* Social + Language (desktop) */}
-        <div className="hidden md:flex items-center gap-3">
+        <div className="hidden md:flex items-center" style={{ gap: "16px" }}>
           {socials.map((s) => (
             <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer" aria-label={s.label} className="text-foreground/60 hover:text-primary transition-colors">
               {s.icon}
