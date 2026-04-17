@@ -220,7 +220,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     "hero.title1": "It's Time! ",
     "hero.highlight": "LanguageNow!",
     "hero.title2": " ⚡",
-    "hero.subtitle": "International online language school. Experienced professionals focused on real results — with noticeable improvement in your first weeks.",
+    "hero.subtitle": "Online classes with experienced teachers and a focus on real results.",
     "hero.cta": "Start today",
     "hero.cta2": "Talk to a consultant",
 
@@ -411,7 +411,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     "hero.title1": "It's Time! ",
     "hero.highlight": "LanguageNow!",
     "hero.title2": " ⚡",
-    "hero.subtitle": "Escuela internacional de idiomas online. Profesionales experimentados enfocados en resultados reales — con mejoras notables en las primeras semanas.",
+    "hero.subtitle": "Clases online con profesores experimentados y enfoque en resultados reales.",
     "hero.cta": "Empieza hoy",
     "hero.cta2": "Habla con un consultor",
 
