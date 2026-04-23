@@ -53,8 +53,8 @@ const HeroSection = () => {
             style={{ maxWidth: "460px" }}
           >
             <h1
-              className="text-4xl md:text-[52px] font-extrabold tracking-tight"
-              style={{ lineHeight: 1.1 }}
+              className="text-5xl md:text-[62px] font-extrabold tracking-tight"
+              style={{ lineHeight: 1.08 }}
             >
               {t("hero.title1")}
               <span className="text-accent">{t("hero.highlight")}</span>
@@ -62,27 +62,28 @@ const HeroSection = () => {
             </h1>
             <p
               className="opacity-80 leading-relaxed"
-              style={{ maxWidth: "420px", fontSize: "17px" }}
+              style={{ maxWidth: "420px", fontSize: "18px" }}
             >
               {t("hero.subtitle")}
             </p>
-            <div className="pt-2">
+            <div className="pt-4">
               <a
                 href="https://wa.me/50766778280"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 font-bold shadow-lg hover:scale-[1.03] hover:shadow-xl"
+                className="inline-flex items-center gap-2.5 font-bold shadow-lg hover:scale-[1.03] hover:shadow-2xl"
                 style={{
-                  height: "54px",
-                  padding: "0 32px",
-                  fontSize: "15px",
-                  borderRadius: "14px",
+                  height: "62px",
+                  padding: "0 44px",
+                  fontSize: "18px",
+                  borderRadius: "16px",
                   transition: "all 0.2s ease",
                   background: "hsl(45 97% 54%)",
                   color: "#0F3D91",
+                  boxShadow: "0 4px 20px rgba(234,179,8,0.35)",
                 }}
               >
-                <MessageCircle size={18} /> {t("hero.cta2")}
+                <MessageCircle size={20} /> {t("hero.cta2")}
               </a>
             </div>
           </div>
