@@ -42,13 +42,17 @@ const HeroSection = () => {
               </a>
             </div>
           </div>
-          <div className="relative flex justify-center">
+          <div className="relative flex justify-center items-center">
             <img
               src={heroImage}
-              alt="Alunos aprendendo idiomas online na escola internacional LanguageNow"
-              width={1280}
-              height={720}
-              className="rounded-2xl shadow-2xl object-cover max-h-[420px] w-full"
+              alt="Mascote LanguageNow - Escola internacional de idiomas no Panamá"
+              className="object-contain"
+              style={{
+                height: "clamp(380px, 45vw, 480px)",
+                width: "auto",
+                filter: "drop-shadow(0 20px 40px rgba(0,0,0,0.25))",
+                transform: "scale(1.05)",
+              }}
             />
           </div>
         </div>
