@@ -31,7 +31,27 @@
 </head>
 
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <!-- Static shell for fast FCP — replaced by React on hydration -->
+      <style>
+        .shell-nav{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(255,255,255,.95);height:80px;display:flex;align-items:center;padding:0 1.5rem}
+        .shell-hero{padding-top:80px;background:linear-gradient(135deg,#0F3D91 0%,#1a4fba 30%,#2563EB 55%,#60A5FA 100%);min-height:60vh;display:flex;align-items:center;justify-content:center}
+        .shell-hero-inner{max-width:1200px;margin:0 auto;padding:2rem 1.5rem;display:flex;flex-direction:column;align-items:center;gap:1.5rem;text-align:center}
+        .shell-h1{color:#fff;font-size:clamp(2rem,5vw,3.5rem);font-weight:800;line-height:1.1;font-family:'Plus Jakarta Sans',system-ui,sans-serif}
+        .shell-h1 span{color:#EAB308}
+        .shell-p{color:rgba(255,255,255,.8);font-size:1rem;max-width:420px;line-height:1.6;font-family:'Plus Jakarta Sans',system-ui,sans-serif}
+        @media(min-width:768px){.shell-hero-inner{flex-direction:row;text-align:left;gap:2rem}}
+      </style>
+      <div class="shell-nav" aria-hidden="true"></div>
+      <div class="shell-hero" aria-hidden="true">
+        <div class="shell-hero-inner">
+          <div>
+            <h1 class="shell-h1">Fale idiomas com <span>confiança.</span> Comece agora!</h1>
+            <p class="shell-p">Aulas online e ao vivo de inglês e mandarim com professores experientes.</p>
+          </div>
+        </div>
+      </div>
+    </div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
