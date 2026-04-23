@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Menu, X, Globe } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 import type { Lang } from "@/i18n/translations";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/logo.webp";
 
 const navKeys = [
   { key: "nav.inicio", href: "#inicio" },
