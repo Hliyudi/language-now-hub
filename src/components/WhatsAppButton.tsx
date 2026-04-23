@@ -1,4 +1,4 @@
-import { Instagram } from "lucide-react";
+import { MessageCircle } from "lucide-react";
 
 const FloatingContactButton = () => (
   <a
@@ -6,13 +6,9 @@ const FloatingContactButton = () => (
     target="_blank"
     rel="noopener noreferrer"
     aria-label="Instagram"
-    className="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full text-white flex items-center justify-center shadow-lg hover:scale-110 transition-all animate-float"
-    style={{
-      background:
-        "linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%)",
-    }}
+    className="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-primary text-primary-foreground flex items-center justify-center shadow-lg hover:scale-110 transition-all animate-float"
   >
-    <Instagram size={28} />
+    <MessageCircle size={28} />
   </a>
 );
 
