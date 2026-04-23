@@ -1,4 +1,4 @@
-import heroImage from "@/assets/hero-mascot.png";
+import heroImage from "@/assets/mascot-hero.png";
 import { MessageCircle } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 
