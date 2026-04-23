@@ -89,9 +89,9 @@ const HeroSection = () => {
 
             {/* Mascot */}
             <div className="relative flex justify-center items-center order-1 md:order-2 w-[70%] sm:w-[60%] md:w-[50%] lg:w-[55%]">
-              {/* Primary warm glow */}
+              {/* Primary warm glow — behind mascot */}
               <div
-                className="absolute pointer-events-none hidden md:block"
+                className="absolute pointer-events-none hidden md:block z-0"
                 style={{
                   width: "min(550px, 100%)",
                   height: "min(550px, 100%)",
@@ -99,14 +99,13 @@ const HeroSection = () => {
                   left: "55%",
                   transform: "translate(-50%, -45%)",
                   borderRadius: "50%",
-                  background: "radial-gradient(circle, rgba(255,210,120,0.18) 0%, rgba(255,210,120,0.08) 35%, rgba(255,210,120,0.02) 60%, transparent 80%)",
-                  filter: "blur(100px)",
+                  background: "radial-gradient(circle, rgba(255,210,120,0.15) 0%, rgba(255,210,120,0.06) 35%, transparent 70%)",
                 }}
               />
 
-              {/* Secondary cool glow */}
+              {/* Secondary cool glow — behind mascot */}
               <div
-                className="absolute pointer-events-none hidden md:block"
+                className="absolute pointer-events-none hidden md:block z-0"
                 style={{
                   width: "min(700px, 120%)",
                   height: "min(700px, 120%)",
@@ -114,14 +113,13 @@ const HeroSection = () => {
                   left: "52%",
                   transform: "translate(-50%, -48%)",
                   borderRadius: "50%",
-                  background: "radial-gradient(circle, rgba(180,210,255,0.10) 0%, rgba(96,165,250,0.04) 40%, transparent 75%)",
-                  filter: "blur(140px)",
+                  background: "radial-gradient(circle, rgba(180,210,255,0.08) 0%, rgba(96,165,250,0.03) 40%, transparent 75%)",
                 }}
               />
 
-              {/* Floor reflection */}
+              {/* Floor reflection — behind mascot */}
               <div
-                className="absolute pointer-events-none hidden md:block"
+                className="absolute pointer-events-none hidden md:block z-0"
                 style={{
                   width: "60%",
                   height: "18%",
@@ -129,14 +127,13 @@ const HeroSection = () => {
                   left: "50%",
                   transform: "translateX(-50%)",
                   borderRadius: "50%",
-                  background: "radial-gradient(ellipse, rgba(96,165,250,0.15) 0%, transparent 70%)",
-                  filter: "blur(30px)",
+                  background: "radial-gradient(ellipse, rgba(96,165,250,0.12) 0%, transparent 70%)",
                 }}
               />
 
-              {/* Diffuse shadow */}
+              {/* Diffuse shadow — behind mascot */}
               <div
-                className="absolute pointer-events-none hidden md:block"
+                className="absolute pointer-events-none hidden md:block z-0"
                 style={{
                   width: "50%",
                   height: "8%",
@@ -144,8 +141,7 @@ const HeroSection = () => {
                   left: "50%",
                   transform: "translateX(-50%)",
                   borderRadius: "50%",
-                  background: "rgba(0,0,0,0.18)",
-                  filter: "blur(50px)",
+                  background: "rgba(0,0,0,0.15)",
                 }}
               />
 
@@ -158,21 +154,6 @@ const HeroSection = () => {
                   maxWidth: "100%",
                   height: "auto",
                   maxHeight: "500px",
-                  filter: "contrast(1.05) drop-shadow(0 8px 24px rgba(0,0,0,0.15))",
-                }}
-              />
-
-              {/* Subtle highlight glow — no backdrop-filter to keep mascot/balloons sharp */}
-              <div
-                className="absolute pointer-events-none z-[5] hidden md:block"
-                style={{
-                  width: "40%",
-                  height: "25%",
-                  top: "5%",
-                  left: "50%",
-                  transform: "translateX(-50%)",
-                  borderRadius: "50%",
-                  background: "linear-gradient(180deg, rgba(255,255,255,0.06) 0%, transparent 100%)",
                 }}
               />
             </div>
