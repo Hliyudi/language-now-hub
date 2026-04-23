@@ -9,12 +9,44 @@ const HeroSection = () => {
       <div
         className="relative"
         style={{
-          background: "linear-gradient(135deg, hsl(217 91% 30%) 0%, hsl(217 91% 45%) 50%, hsl(217 80% 52%) 100%)",
+          background: "linear-gradient(135deg, #0F3D91 0%, #1a4fba 30%, #2563EB 55%, #60A5FA 100%)",
         }}
       >
+        {/* Noise/grain overlay */}
         <div
-          className="container grid grid-cols-1 md:grid-cols-[45%_55%] items-center py-16 md:py-24 gap-8 md:gap-10"
+          className="absolute inset-0 pointer-events-none z-[1]"
+          style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")`,
+            opacity: 0.03,
+            mixBlendMode: "overlay",
+          }}
+        />
+
+        {/* Top-right directional light */}
+        <div
+          className="absolute pointer-events-none z-[1]"
+          style={{
+            width: "70%",
+            height: "70%",
+            top: "-15%",
+            right: "-10%",
+            background: "radial-gradient(ellipse at center, rgba(255,255,255,0.08) 0%, transparent 70%)",
+          }}
+        />
+
+        {/* Subtle curved lines for movement */}
+        <svg
+          className="absolute inset-0 w-full h-full pointer-events-none z-[1]"
+          style={{ opacity: 0.04 }}
+          preserveAspectRatio="none"
+          viewBox="0 0 1200 600"
         >
+          <path d="M0 400 Q300 350 600 380 T1200 340" fill="none" stroke="white" strokeWidth="1.5" />
+          <path d="M0 450 Q400 400 700 430 T1200 390" fill="none" stroke="white" strokeWidth="1" />
+          <path d="M0 500 Q350 460 650 480 T1200 450" fill="none" stroke="white" strokeWidth="0.8" />
+        </svg>
+
+        <div className="container grid grid-cols-1 md:grid-cols-[45%_55%] items-center py-16 md:py-24 gap-8 md:gap-10 relative z-[2]">
           {/* Text block */}
           <div
             className="text-primary-foreground animate-fade-in-up flex flex-col gap-8 order-2 md:order-1"
@@ -47,7 +79,7 @@ const HeroSection = () => {
                   borderRadius: "14px",
                   transition: "all 0.2s ease",
                   background: "hsl(45 97% 54%)",
-                  color: "hsl(217 91% 20%)",
+                  color: "#0F3D91",
                 }}
               >
                 <MessageCircle size={18} /> {t("hero.cta2")}
@@ -57,20 +89,51 @@ const HeroSection = () => {
 
           {/* Mascot */}
           <div className="relative flex justify-center items-center order-1 md:order-2 md:-mr-4">
-            {/* Glow */}
+            {/* Radial light behind mascot */}
             <div
               className="absolute pointer-events-none"
               style={{
-                width: "60%",
-                height: "60%",
+                width: "80%",
+                height: "80%",
                 top: "50%",
                 left: "50%",
                 transform: "translate(-50%, -50%)",
                 borderRadius: "50%",
-                background: "radial-gradient(circle, rgba(250,204,21,0.15) 0%, rgba(59,130,246,0.10) 50%, transparent 80%)",
+                background: "radial-gradient(circle, rgba(96,165,250,0.20) 0%, rgba(37,99,235,0.08) 50%, transparent 80%)",
+                filter: "blur(120px)",
+              }}
+            />
+
+            {/* Floor reflection / ground glow */}
+            <div
+              className="absolute pointer-events-none"
+              style={{
+                width: "60%",
+                height: "18%",
+                bottom: "-2%",
+                left: "50%",
+                transform: "translateX(-50%)",
+                borderRadius: "50%",
+                background: "radial-gradient(ellipse, rgba(96,165,250,0.15) 0%, transparent 70%)",
+                filter: "blur(30px)",
+              }}
+            />
+
+            {/* Diffuse shadow below mascot */}
+            <div
+              className="absolute pointer-events-none"
+              style={{
+                width: "50%",
+                height: "8%",
+                bottom: "-4%",
+                left: "50%",
+                transform: "translateX(-50%)",
+                borderRadius: "50%",
+                background: "rgba(0,0,0,0.18)",
                 filter: "blur(50px)",
               }}
             />
+
             <img
               src={heroImage}
               alt="Mascote LanguageNow - Escola internacional de idiomas no Panamá"
@@ -79,6 +142,22 @@ const HeroSection = () => {
                 maxWidth: "100%",
                 height: "auto",
                 maxHeight: "560px",
+                filter: "contrast(1.05)",
+              }}
+            />
+
+            {/* Glass highlight overlay on balloons area (top portion) */}
+            <div
+              className="absolute pointer-events-none z-20"
+              style={{
+                width: "40%",
+                height: "25%",
+                top: "5%",
+                left: "50%",
+                transform: "translateX(-50%)",
+                borderRadius: "50%",
+                background: "linear-gradient(180deg, rgba(255,255,255,0.06) 0%, transparent 100%)",
+                backdropFilter: "blur(1px)",
               }}
             />
           </div>
