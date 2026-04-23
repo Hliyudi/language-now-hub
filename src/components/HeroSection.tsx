@@ -5,7 +5,7 @@ import { useLanguage } from "@/i18n/LanguageContext";
 const HeroSection = () => {
   const { t } = useLanguage();
   return (
-    <section id="inicio" className="relative pt-16 overflow-visible">
+    <section id="inicio" className="relative pt-16 overflow-hidden">
       <div
         className="relative"
         style={{
@@ -34,7 +34,7 @@ const HeroSection = () => {
           }}
         />
 
-        {/* Subtle curved lines for movement */}
+        {/* Subtle curved lines */}
         <svg
           className="absolute inset-0 w-full h-full pointer-events-none z-[1]"
           style={{ opacity: 0.04 }}
@@ -46,136 +46,136 @@ const HeroSection = () => {
           <path d="M0 500 Q350 460 650 480 T1200 450" fill="none" stroke="white" strokeWidth="0.8" />
         </svg>
 
-        <div className="container grid grid-cols-1 md:grid-cols-[45%_55%] items-center py-16 md:py-24 gap-8 md:gap-10 relative z-[2]">
-          {/* Text block */}
-          <div
-            className="text-primary-foreground animate-fade-in-up flex flex-col gap-8 order-2 md:order-1"
-            style={{ maxWidth: "460px" }}
-          >
-            <h1
-              className="text-5xl md:text-[62px] font-extrabold tracking-tight"
-              style={{ lineHeight: 1.08 }}
+        <div className="container relative z-[2]">
+          <div className="flex flex-col md:flex-row items-center py-12 md:py-20 lg:py-24 gap-8 md:gap-6 lg:gap-10">
+            {/* Text block */}
+            <div
+              className="text-primary-foreground animate-fade-in-up flex flex-col gap-6 md:gap-8 order-2 md:order-1 text-center md:text-left w-full md:w-[50%] lg:w-[45%]"
             >
-              {t("hero.title1")}
-              <span className="text-accent">{t("hero.highlight")}</span>
-              {t("hero.title2")}
-            </h1>
-            <p
-              className="opacity-80 leading-relaxed"
-              style={{ maxWidth: "420px", fontSize: "18px" }}
-            >
-              {t("hero.subtitle")}
-            </p>
-            <div className="pt-4">
-              <a
-                href="https://wa.me/50766778280"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2.5 font-bold shadow-lg hover:scale-[1.03] hover:shadow-2xl"
-                style={{
-                  height: "62px",
-                  padding: "0 44px",
-                  fontSize: "18px",
-                  borderRadius: "16px",
-                  transition: "all 0.2s ease",
-                  background: "hsl(45 97% 54%)",
-                  color: "#0F3D91",
-                  boxShadow: "0 4px 20px rgba(234,179,8,0.35)",
-                }}
+              <h1
+                className="text-4xl sm:text-5xl md:text-[52px] lg:text-[62px] font-extrabold tracking-tight"
+                style={{ lineHeight: 1.08 }}
               >
-                <MessageCircle size={20} /> {t("hero.cta2")}
-              </a>
+                {t("hero.title1")}
+                <span className="text-accent">{t("hero.highlight")}</span>
+                {t("hero.title2")}
+              </h1>
+              <p
+                className="opacity-80 leading-relaxed text-base md:text-[17px] lg:text-[18px] max-w-[420px] mx-auto md:mx-0"
+              >
+                {t("hero.subtitle")}
+              </p>
+              <div className="pt-2 md:pt-4">
+                <a
+                  href="https://wa.me/50766778280"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2.5 font-bold shadow-lg hover:scale-[1.03] hover:shadow-2xl w-full sm:w-auto justify-center"
+                  style={{
+                    height: "56px",
+                    padding: "0 32px",
+                    fontSize: "16px",
+                    borderRadius: "14px",
+                    transition: "all 0.2s ease",
+                    background: "hsl(45 97% 54%)",
+                    color: "#0F3D91",
+                    boxShadow: "0 4px 20px rgba(234,179,8,0.35)",
+                  }}
+                >
+                  <MessageCircle size={20} /> {t("hero.cta2")}
+                </a>
+              </div>
             </div>
-          </div>
 
-          {/* Mascot */}
-          <div className="relative flex justify-center items-center order-1 md:order-2 md:-mr-4">
-            {/* Primary warm glow */}
-            <div
-              className="absolute pointer-events-none"
-              style={{
-                width: "550px",
-                height: "550px",
-                top: "50%",
-                left: "55%",
-                transform: "translate(-50%, -45%)",
-                borderRadius: "50%",
-                background: "radial-gradient(circle, rgba(255,210,120,0.18) 0%, rgba(255,210,120,0.08) 35%, rgba(255,210,120,0.02) 60%, transparent 80%)",
-                filter: "blur(100px)",
-              }}
-            />
+            {/* Mascot */}
+            <div className="relative flex justify-center items-center order-1 md:order-2 w-[70%] sm:w-[60%] md:w-[50%] lg:w-[55%]">
+              {/* Primary warm glow */}
+              <div
+                className="absolute pointer-events-none hidden md:block"
+                style={{
+                  width: "min(550px, 100%)",
+                  height: "min(550px, 100%)",
+                  top: "50%",
+                  left: "55%",
+                  transform: "translate(-50%, -45%)",
+                  borderRadius: "50%",
+                  background: "radial-gradient(circle, rgba(255,210,120,0.18) 0%, rgba(255,210,120,0.08) 35%, rgba(255,210,120,0.02) 60%, transparent 80%)",
+                  filter: "blur(100px)",
+                }}
+              />
 
-            {/* Secondary cool glow for depth */}
-            <div
-              className="absolute pointer-events-none"
-              style={{
-                width: "700px",
-                height: "700px",
-                top: "50%",
-                left: "52%",
-                transform: "translate(-50%, -48%)",
-                borderRadius: "50%",
-                background: "radial-gradient(circle, rgba(180,210,255,0.10) 0%, rgba(96,165,250,0.04) 40%, transparent 75%)",
-                filter: "blur(140px)",
-              }}
-            />
+              {/* Secondary cool glow */}
+              <div
+                className="absolute pointer-events-none hidden md:block"
+                style={{
+                  width: "min(700px, 120%)",
+                  height: "min(700px, 120%)",
+                  top: "50%",
+                  left: "52%",
+                  transform: "translate(-50%, -48%)",
+                  borderRadius: "50%",
+                  background: "radial-gradient(circle, rgba(180,210,255,0.10) 0%, rgba(96,165,250,0.04) 40%, transparent 75%)",
+                  filter: "blur(140px)",
+                }}
+              />
 
-            {/* Floor reflection / ground glow */}
-            <div
-              className="absolute pointer-events-none"
-              style={{
-                width: "60%",
-                height: "18%",
-                bottom: "-2%",
-                left: "50%",
-                transform: "translateX(-50%)",
-                borderRadius: "50%",
-                background: "radial-gradient(ellipse, rgba(96,165,250,0.15) 0%, transparent 70%)",
-                filter: "blur(30px)",
-              }}
-            />
+              {/* Floor reflection */}
+              <div
+                className="absolute pointer-events-none hidden md:block"
+                style={{
+                  width: "60%",
+                  height: "18%",
+                  bottom: "-2%",
+                  left: "50%",
+                  transform: "translateX(-50%)",
+                  borderRadius: "50%",
+                  background: "radial-gradient(ellipse, rgba(96,165,250,0.15) 0%, transparent 70%)",
+                  filter: "blur(30px)",
+                }}
+              />
 
-            {/* Diffuse shadow below mascot */}
-            <div
-              className="absolute pointer-events-none"
-              style={{
-                width: "50%",
-                height: "8%",
-                bottom: "-4%",
-                left: "50%",
-                transform: "translateX(-50%)",
-                borderRadius: "50%",
-                background: "rgba(0,0,0,0.18)",
-                filter: "blur(50px)",
-              }}
-            />
+              {/* Diffuse shadow */}
+              <div
+                className="absolute pointer-events-none hidden md:block"
+                style={{
+                  width: "50%",
+                  height: "8%",
+                  bottom: "-4%",
+                  left: "50%",
+                  transform: "translateX(-50%)",
+                  borderRadius: "50%",
+                  background: "rgba(0,0,0,0.18)",
+                  filter: "blur(50px)",
+                }}
+              />
 
-            <img
-              src={heroImage}
-              alt="Mascote LanguageNow - Escola internacional de idiomas no Panamá"
-              className="relative z-10 object-contain w-[75%] md:w-full lg:scale-[1.35]"
-              style={{
-                maxWidth: "100%",
-                height: "auto",
-                maxHeight: "560px",
-                filter: "contrast(1.05) drop-shadow(0 8px 24px rgba(0,0,0,0.15))",
-              }}
-            />
+              <img
+                src={heroImage}
+                alt="Mascote LanguageNow - Escola internacional de idiomas no Panamá"
+                className="relative z-10 object-contain w-full md:w-[90%] lg:w-full lg:scale-[1.2]"
+                style={{
+                  maxWidth: "100%",
+                  height: "auto",
+                  maxHeight: "500px",
+                  filter: "contrast(1.05) drop-shadow(0 8px 24px rgba(0,0,0,0.15))",
+                }}
+              />
 
-            {/* Glass highlight overlay on balloons area (top portion) */}
-            <div
-              className="absolute pointer-events-none z-20"
-              style={{
-                width: "40%",
-                height: "25%",
-                top: "5%",
-                left: "50%",
-                transform: "translateX(-50%)",
-                borderRadius: "50%",
-                background: "linear-gradient(180deg, rgba(255,255,255,0.06) 0%, transparent 100%)",
-                backdropFilter: "blur(1px)",
-              }}
-            />
+              {/* Glass highlight */}
+              <div
+                className="absolute pointer-events-none z-20 hidden md:block"
+                style={{
+                  width: "40%",
+                  height: "25%",
+                  top: "5%",
+                  left: "50%",
+                  transform: "translateX(-50%)",
+                  borderRadius: "50%",
+                  background: "linear-gradient(180deg, rgba(255,255,255,0.06) 0%, transparent 100%)",
+                  backdropFilter: "blur(1px)",
+                }}
+              />
+            </div>
           </div>
         </div>
       </div>
