@@ -24,6 +24,10 @@ const FloatingContactButton = () => {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Instagram"
+        onClick={(e) => {
+          e.stopPropagation();
+          window.open('https://instagram.com/languagenowpa', '_blank', 'noopener,noreferrer');
+        }}
         className="flex items-center justify-center rounded-full transition-all duration-200 hover:scale-[1.08] cursor-pointer"
         style={{
           width: 52,
