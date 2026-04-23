@@ -19,7 +19,7 @@ const ContactSection = () => {
   return (
     <section id="contato" className="py-20" ref={ref}>
       <div className="container max-w-4xl">
-        <div className="relative rounded-2xl border border-border bg-card p-10 md:p-16 text-center shadow-xl overflow-hidden">
+        <div className="relative rounded-2xl border border-border bg-card p-6 sm:p-10 md:p-16 text-center shadow-xl overflow-hidden">
           {/* Decorative gradient */}
           <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 pointer-events-none" />
 
