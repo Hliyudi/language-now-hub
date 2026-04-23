@@ -28,7 +28,7 @@ const FloatingContactButton = () => {
           e.stopPropagation();
           window.open(INSTAGRAM_URL, "_blank", "noopener,noreferrer");
         }}
-        className="flex items-center justify-center rounded-full transition-all duration-200 hover:scale-[1.08]"
+        className="flex items-center justify-center rounded-full transition-all duration-200 hover:scale-[1.08] cursor-pointer"
         style={{
           width: 52,
           height: 52,
