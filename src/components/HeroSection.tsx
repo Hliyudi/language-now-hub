@@ -63,7 +63,7 @@ const HeroSection = () => {
                 maxHeight: "min(85vh, 520px)",
                 background: "transparent",
                 imageRendering: "auto",
-                filter: "drop-shadow(0 16px 32px rgba(0,0,0,0.18))",
+                filter: "drop-shadow(0 0 60px rgba(59,130,246,0.3)) drop-shadow(0 0 30px rgba(250,204,21,0.2))",
               }}
             />
           </div>
