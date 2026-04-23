@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import { MessageCircle } from "lucide-react";
 
 const WHATSAPP_URL = "https://wa.me/50766778280";
-const INSTAGRAM_URL = "https://instagram.com/languagenowpa";
+
 
 const FloatingContactButton = () => {
   const [open, setOpen] = useState(false);
