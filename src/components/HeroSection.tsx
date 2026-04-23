@@ -161,9 +161,9 @@ const HeroSection = () => {
                 }}
               />
 
-              {/* Glass highlight */}
+              {/* Subtle highlight glow — no backdrop-filter to keep mascot/balloons sharp */}
               <div
-                className="absolute pointer-events-none z-20 hidden md:block"
+                className="absolute pointer-events-none z-[5] hidden md:block"
                 style={{
                   width: "40%",
                   height: "25%",
@@ -172,7 +172,6 @@ const HeroSection = () => {
                   transform: "translateX(-50%)",
                   borderRadius: "50%",
                   background: "linear-gradient(180deg, rgba(255,255,255,0.06) 0%, transparent 100%)",
-                  backdropFilter: "blur(1px)",
                 }}
               />
             </div>
