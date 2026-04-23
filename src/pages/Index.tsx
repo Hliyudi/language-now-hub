@@ -1,28 +1,32 @@
+import { lazy, Suspense } from "react";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
-import BenefitsSection from "@/components/BenefitsSection";
-import AboutSection from "@/components/AboutSection";
-import CoursesSection from "@/components/CoursesSection";
-import MethodologySection from "@/components/MethodologySection";
-import TestimonialsSection from "@/components/TestimonialsSection";
-import CtaSection from "@/components/CtaSection";
-import ContactSection from "@/components/ContactSection";
-import Footer from "@/components/Footer";
-import WhatsAppButton from "@/components/WhatsAppButton";
+
+const BenefitsSection = lazy(() => import("@/components/BenefitsSection"));
+const AboutSection = lazy(() => import("@/components/AboutSection"));
+const CoursesSection = lazy(() => import("@/components/CoursesSection"));
+const MethodologySection = lazy(() => import("@/components/MethodologySection"));
+const TestimonialsSection = lazy(() => import("@/components/TestimonialsSection"));
+const CtaSection = lazy(() => import("@/components/CtaSection"));
+const ContactSection = lazy(() => import("@/components/ContactSection"));
+const Footer = lazy(() => import("@/components/Footer"));
+const WhatsAppButton = lazy(() => import("@/components/WhatsAppButton"));
 
 const Index = () => (
   <div className="min-h-screen">
     <Navbar />
     <HeroSection />
-    <BenefitsSection />
-    <AboutSection />
-    <CoursesSection />
-    <MethodologySection />
-    <TestimonialsSection />
-    <CtaSection />
-    <ContactSection />
-    <Footer />
-    <WhatsAppButton />
+    <Suspense fallback={null}>
+      <BenefitsSection />
+      <AboutSection />
+      <CoursesSection />
+      <MethodologySection />
+      <TestimonialsSection />
+      <CtaSection />
+      <ContactSection />
+      <Footer />
+      <WhatsAppButton />
+    </Suspense>
   </div>
 );
 
