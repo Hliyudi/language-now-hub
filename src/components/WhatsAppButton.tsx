@@ -18,16 +18,12 @@ const FloatingContactButton = () => {
 
   return (
     <div ref={ref} className="fixed bottom-6 right-6 z-[9999] flex flex-col items-center gap-3">
-      {/* Instagram */}
+      {/* Instagram — pure anchor, no JS handlers */}
       <a
         href="https://instagram.com/languagenowpa"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Instagram"
-        onClick={(e) => {
-          e.stopPropagation();
-          window.open('https://instagram.com/languagenowpa', '_blank', 'noopener,noreferrer');
-        }}
         className="flex items-center justify-center rounded-full transition-all duration-200 hover:scale-[1.08] cursor-pointer"
         style={{
           width: 52,
@@ -39,9 +35,11 @@ const FloatingContactButton = () => {
           transition: "opacity 0.22s ease, transform 0.22s ease",
           transitionDelay: open ? "0.04s" : "0s",
           pointerEvents: open ? "auto" : "none",
+          zIndex: 9999,
+          position: "relative" as const,
         }}
       >
-        <svg viewBox="0 0 24 24" width="24" height="24" fill="none">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" style={{ pointerEvents: "none" }}>
           <defs>
             <linearGradient id="ig" x1="0" y1="24" x2="24" y2="0" gradientUnits="userSpaceOnUse">
               <stop offset="0%" stopColor="#f09433"/>
