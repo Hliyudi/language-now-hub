@@ -150,6 +150,7 @@ const HeroSection = () => {
               />
 
               <img
+                fetchPriority="high"
                 src={heroImage}
                 alt="Mascote LanguageNow - Escola internacional de idiomas no Panamá"
                 className="relative z-10 object-contain w-full md:w-[90%] lg:w-full lg:scale-[1.2]"
