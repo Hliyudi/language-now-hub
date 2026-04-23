@@ -1,27 +1,32 @@
 
-# Substituir imagem do Hero pelo mascote
+Implement the Instagram click behavior only in `src/components/WhatsAppButton.tsx`, without changing layout, icon, size, spacing, animation, or position.
 
-## O que será feito
-Substituir a imagem atual do hero (foto de alunos) pelo mascote enviado, ajustando tamanho, posicionamento e efeitos visuais premium.
+1. Update the Instagram item inside the floating contact menu so its click behavior explicitly calls:
+   `window.open('https://instagram.com/languagenowpa', '_blank')`
 
-## Passos
+2. Keep the existing visual element and styling exactly as-is:
+   - same circular button
+   - same gradient Instagram icon
+   - same glass/white background
+   - same fade/slide animation
+   - same stacking above the main chat button
 
-### 1. Copiar a imagem do mascote para o projeto
-- Copiar `user-uploads://Certificado_Language_Now.png` para `src/assets/hero-mascot.png`
+3. Add the click handler directly on the Instagram interactive element and ensure it does not get blocked by parent interactions:
+   - stop the menu toggle container from interfering with the click
+   - keep `pointerEvents: open ? "auto" : "none"` so it is clickable only when visible
+   - preserve the existing high fixed positioning and `z-[9999]`
 
-### 2. Atualizar `src/components/HeroSection.tsx`
-- Trocar o import de `hero-image.jpg` para `hero-mascot.png`
-- Remover classes da imagem antiga (`rounded-2xl shadow-2xl object-cover max-h-[420px] w-full`, `width/height` attributes)
-- Aplicar novo estilo na imagem:
-  - `height: clamp(380px, 45vw, 480px)`, `width: auto`
-  - `object-fit: contain` (sem fundo, sem caixa)
-  - `filter: drop-shadow(0 20px 40px rgba(0,0,0,0.25))`
-  - `transform: scale(1.05)`
-- Manter o container com `flex justify-center items-center` para centralização vertical e horizontal
+4. Keep safe external-link semantics where applicable:
+   - if the element remains an anchor, keep `target="_blank"` and `rel="noopener noreferrer"`
+   - if the click is fully driven by JavaScript, ensure the handler always opens the exact Instagram URL in a new tab
 
-### Arquivos modificados
-- `src/assets/hero-mascot.png` (novo)
-- `src/components/HeroSection.tsx` (editado)
+5. Verify no other logic overrides or cancels the Instagram click:
+   - no `preventDefault` blocking navigation
+   - no placeholder href
+   - no parent click handler closing the menu before `window.open` executes
 
-### O que NÃO será alterado
-- Textos, layout, espaçamentos, CTA, gradiente de fundo — tudo permanece igual
+Technical details:
+- File to edit: `src/components/WhatsAppButton.tsx`
+- Current state: the Instagram button is already a visible top menu item in the floating contact stack, while WhatsApp already uses `window.open(...)`
+- Recommended implementation pattern: mirror the WhatsApp button’s reliable click behavior for Instagram, but use the Instagram URL exactly:
+  `https://instagram.com/languagenowpa`
