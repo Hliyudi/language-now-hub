@@ -28,7 +28,7 @@ const FloatingContactButton = () => {
           e.stopPropagation();
           window.open(INSTAGRAM_URL, "_blank", "noopener,noreferrer");
         }}
-        className="flex items-center justify-center rounded-full transition-all duration-200 hover:scale-[1.08]"
+        className="flex items-center justify-center rounded-full transition-all duration-200 hover:scale-[1.08] cursor-pointer"
         style={{
           width: 52,
           height: 52,
@@ -61,7 +61,11 @@ const FloatingContactButton = () => {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="WhatsApp"
-        className="flex items-center justify-center rounded-full transition-all duration-200 hover:scale-[1.08]"
+        onClick={(e) => {
+          e.stopPropagation();
+          window.open(WHATSAPP_URL, "_blank", "noopener,noreferrer");
+        }}
+        className="flex items-center justify-center rounded-full transition-all duration-200 hover:scale-[1.08] cursor-pointer"
         style={{
           width: 52,
           height: 52,
