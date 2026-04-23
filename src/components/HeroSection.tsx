@@ -15,12 +15,13 @@ const HeroSection = () => {
         }}
       >
         <div
-          className="container grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 items-center py-16 md:py-28"
-          style={{ gridTemplateColumns: undefined }}
+          className="container flex flex-col md:flex-row items-center py-16 md:py-24"
+          style={{ gap: "60px" }}
         >
+          {/* Text block — ~52% */}
           <div
             className="text-primary-foreground animate-fade-in-up flex flex-col gap-5 md:gap-6 order-2 md:order-1"
-            style={{ maxWidth: "520px" }}
+            style={{ flex: "1 1 52%", maxWidth: "560px" }}
           >
             <h1 className="text-4xl md:text-[52px] font-extrabold tracking-tight" style={{ lineHeight: 1.15 }}>
               {t("hero.title1")}
@@ -48,14 +49,18 @@ const HeroSection = () => {
               </a>
             </div>
           </div>
-          <div className="relative flex justify-center items-center order-1 md:order-2">
+
+          {/* Mascot — ~48%, right-aligned with margin */}
+          <div
+            className="relative flex justify-center md:justify-end items-center order-1 md:order-2"
+            style={{ flex: "1 1 48%", paddingRight: "clamp(0px, 5%, 40px)" }}
+          >
             <img
               src={heroImage}
               alt="Mascote LanguageNow - Escola internacional de idiomas no Panamá"
-              className="object-contain w-full max-w-md md:max-w-none"
+              className="object-contain w-[60%] md:w-full"
               style={{
-                maxHeight: "520px",
-                width: "100%",
+                maxHeight: "min(85vh, 520px)",
                 background: "transparent",
                 imageRendering: "auto",
                 filter: "drop-shadow(0 16px 32px rgba(0,0,0,0.18))",
