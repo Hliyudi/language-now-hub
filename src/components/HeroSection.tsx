@@ -14,12 +14,12 @@ const HeroSection = () => {
           boxShadow: "inset 0 0 120px rgba(255,255,255,0.06)",
         }}
       >
-        <div className="container grid md:grid-cols-2 gap-10 items-center py-20 md:py-28" style={{ gridTemplateColumns: undefined }}>
+        <div className="container grid gap-10 items-center py-20 md:py-28" style={{ gridTemplateColumns: "0.9fr 1.1fr" }}>
           <div
             className="text-primary-foreground animate-fade-in-up flex flex-col gap-5 md:gap-6"
-            style={{ maxWidth: "560px" }}
+            style={{ maxWidth: "520px" }}
           >
-            <h1 className="text-4xl md:text-[56px] lg:text-[64px] font-extrabold tracking-tight" style={{ lineHeight: 1.15 }}>
+            <h1 className="text-4xl md:text-[52px] font-extrabold tracking-tight" style={{ lineHeight: 1.15 }}>
               {t("hero.title1")}
               <span className="text-accent">{t("hero.highlight")}</span>
               {t("hero.title2")}
@@ -51,11 +51,12 @@ const HeroSection = () => {
               alt="Mascote LanguageNow - Escola internacional de idiomas no Panamá"
               className="object-contain"
               style={{
-                maxHeight: "420px",
+                maxHeight: "500px",
                 width: "auto",
                 background: "transparent",
                 imageRendering: "auto",
                 filter: "drop-shadow(0 20px 40px rgba(0,0,0,0.25))",
+                transform: "translateY(-20px) translateX(10px)",
               }}
             />
           </div>
