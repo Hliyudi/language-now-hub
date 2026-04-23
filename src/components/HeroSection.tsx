@@ -14,16 +14,17 @@ const HeroSection = () => {
           boxShadow: "inset 0 0 120px rgba(255,255,255,0.06)",
         }}
       >
-        <div className="container grid md:grid-cols-2 gap-10 items-center py-20 md:py-28">
+        <div className="container grid md:grid-cols-2 gap-10 items-center py-20 md:py-28" style={{ gridTemplateColumns: undefined }}>
           <div
             className="text-primary-foreground animate-fade-in-up flex flex-col gap-5 md:gap-6"
+            style={{ maxWidth: "560px" }}
           >
-            <h1 className="text-4xl md:text-5xl lg:text-6xl leading-[1.1] font-extrabold tracking-tight">
+            <h1 className="text-4xl md:text-[56px] lg:text-[64px] font-extrabold tracking-tight" style={{ lineHeight: 1.15 }}>
               {t("hero.title1")}
               <span className="text-accent">{t("hero.highlight")}</span>
               {t("hero.title2")}
             </h1>
-            <p className="text-lg md:text-xl opacity-90 max-w-md leading-relaxed">
+            <p className="text-lg opacity-90 leading-relaxed" style={{ maxWidth: "480px", fontSize: "18px" }}>
               {t("hero.subtitle")}
             </p>
             <div className="flex flex-wrap gap-4 pt-2">
@@ -31,9 +32,11 @@ const HeroSection = () => {
                 href="https://wa.me/50766778280"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-cta-gradient text-accent-foreground px-8 rounded-xl font-bold text-base md:text-lg shadow-lg hover:scale-[1.03] hover:shadow-xl"
+                className="inline-flex items-center gap-2 bg-cta-gradient text-accent-foreground rounded-xl font-bold shadow-lg hover:scale-[1.03] hover:shadow-xl"
                 style={{
                   height: "56px",
+                  padding: "14px 28px",
+                  fontSize: "16px",
                   borderRadius: "12px",
                   transition: "all 0.2s ease",
                 }}
@@ -48,7 +51,7 @@ const HeroSection = () => {
               alt="Mascote LanguageNow - Escola internacional de idiomas no Panamá"
               className="object-contain"
               style={{
-                maxHeight: "380px",
+                maxHeight: "420px",
                 width: "auto",
                 background: "transparent",
                 imageRendering: "auto",
