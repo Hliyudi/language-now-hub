@@ -14,9 +14,12 @@ const HeroSection = () => {
           boxShadow: "inset 0 0 120px rgba(255,255,255,0.06)",
         }}
       >
-        <div className="container grid gap-10 items-center py-20 md:py-28" style={{ gridTemplateColumns: "0.9fr 1.1fr" }}>
+        <div
+          className="container grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 items-center py-16 md:py-28"
+          style={{ gridTemplateColumns: undefined }}
+        >
           <div
-            className="text-primary-foreground animate-fade-in-up flex flex-col gap-5 md:gap-6"
+            className="text-primary-foreground animate-fade-in-up flex flex-col gap-5 md:gap-6 order-2 md:order-1"
             style={{ maxWidth: "520px" }}
           >
             <h1 className="text-4xl md:text-[52px] font-extrabold tracking-tight" style={{ lineHeight: 1.15 }}>
@@ -45,18 +48,17 @@ const HeroSection = () => {
               </a>
             </div>
           </div>
-          <div className="relative flex justify-center items-center">
+          <div className="relative flex justify-center items-center order-1 md:order-2">
             <img
               src={heroImage}
               alt="Mascote LanguageNow - Escola internacional de idiomas no Panamá"
-              className="object-contain"
+              className="object-contain w-full max-w-md md:max-w-none"
               style={{
-                maxHeight: "500px",
-                width: "auto",
+                maxHeight: "520px",
+                width: "100%",
                 background: "transparent",
                 imageRendering: "auto",
-                filter: "drop-shadow(0 20px 40px rgba(0,0,0,0.25))",
-                transform: "translateY(-20px) translateX(10px)",
+                filter: "drop-shadow(0 16px 32px rgba(0,0,0,0.18))",
               }}
             />
           </div>
