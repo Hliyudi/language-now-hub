@@ -90,18 +90,33 @@ const HeroSection = () => {
 
           {/* Mascot */}
           <div className="relative flex justify-center items-center order-1 md:order-2 md:-mr-4">
-            {/* Radial light behind mascot */}
+            {/* Primary warm glow */}
             <div
               className="absolute pointer-events-none"
               style={{
-                width: "80%",
-                height: "80%",
+                width: "550px",
+                height: "550px",
                 top: "50%",
-                left: "50%",
-                transform: "translate(-50%, -50%)",
+                left: "55%",
+                transform: "translate(-50%, -45%)",
                 borderRadius: "50%",
-                background: "radial-gradient(circle, rgba(96,165,250,0.20) 0%, rgba(37,99,235,0.08) 50%, transparent 80%)",
-                filter: "blur(120px)",
+                background: "radial-gradient(circle, rgba(255,210,120,0.18) 0%, rgba(255,210,120,0.08) 35%, rgba(255,210,120,0.02) 60%, transparent 80%)",
+                filter: "blur(100px)",
+              }}
+            />
+
+            {/* Secondary cool glow for depth */}
+            <div
+              className="absolute pointer-events-none"
+              style={{
+                width: "700px",
+                height: "700px",
+                top: "50%",
+                left: "52%",
+                transform: "translate(-50%, -48%)",
+                borderRadius: "50%",
+                background: "radial-gradient(circle, rgba(180,210,255,0.10) 0%, rgba(96,165,250,0.04) 40%, transparent 75%)",
+                filter: "blur(140px)",
               }}
             />
 
@@ -143,7 +158,7 @@ const HeroSection = () => {
                 maxWidth: "100%",
                 height: "auto",
                 maxHeight: "560px",
-                filter: "contrast(1.05)",
+                filter: "contrast(1.05) drop-shadow(0 8px 24px rgba(0,0,0,0.15))",
               }}
             />
 
