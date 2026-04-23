@@ -48,10 +48,11 @@ const HeroSection = () => {
               alt="Mascote LanguageNow - Escola internacional de idiomas no Panamá"
               className="object-contain"
               style={{
-                height: "clamp(380px, 45vw, 480px)",
+                maxHeight: "380px",
                 width: "auto",
+                background: "transparent",
+                imageRendering: "auto",
                 filter: "drop-shadow(0 20px 40px rgba(0,0,0,0.25))",
-                transform: "scale(1.05)",
               }}
             />
           </div>
