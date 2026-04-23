@@ -56,44 +56,13 @@ const HeroSection = () => {
           </div>
 
           {/* Mascot with glow + shadow */}
-          <div className="relative flex justify-center items-center order-1 md:order-2">
-            {/* Glow behind mascot */}
-            <div
-              className="absolute pointer-events-none"
-              style={{
-                width: "70%",
-                height: "70%",
-                top: "50%",
-                left: "50%",
-                transform: "translate(-50%, -50%)",
-                borderRadius: "50%",
-                background: "radial-gradient(circle, rgba(250,204,21,0.18) 0%, rgba(59,130,246,0.12) 50%, transparent 80%)",
-                filter: "blur(40px)",
-              }}
-            />
-            {/* Floor shadow */}
-            <div
-              className="absolute pointer-events-none"
-              style={{
-                width: "50%",
-                height: "18px",
-                bottom: "4%",
-                left: "50%",
-                transform: "translateX(-50%)",
-                borderRadius: "50%",
-                background: "rgba(0,0,0,0.18)",
-                filter: "blur(12px)",
-              }}
-            />
+          <div className="flex justify-center items-center order-1 md:order-2">
             <img
               src={heroImage}
               alt="Mascote LanguageNow - Escola internacional de idiomas no Panamá"
-              className="relative z-10 object-contain w-[65%] md:w-[90%]"
+              className="object-contain w-[70%] md:w-full"
               style={{
-                maxHeight: "480px",
-                background: "transparent",
-                imageRendering: "auto",
-                transform: "rotate(2deg)",
+                maxHeight: "520px",
               }}
             />
           </div>
