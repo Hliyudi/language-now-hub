@@ -5,7 +5,7 @@ import { useLanguage } from "@/i18n/LanguageContext";
 const HeroSection = () => {
   const { t } = useLanguage();
   return (
-    <section id="inicio" className="relative pt-16 overflow-hidden">
+    <section id="inicio" className="relative pt-16 overflow-visible">
       <div
         className="relative"
         style={{
@@ -13,15 +13,15 @@ const HeroSection = () => {
         }}
       >
         <div
-          className="container grid grid-cols-1 md:grid-cols-2 items-center py-16 md:py-24 gap-8 md:gap-16"
+          className="container grid grid-cols-1 md:grid-cols-[45%_55%] items-center py-16 md:py-24 gap-8 md:gap-10"
         >
           {/* Text block */}
           <div
-            className="text-primary-foreground animate-fade-in-up flex flex-col gap-6 order-2 md:order-1"
-            style={{ maxWidth: "540px" }}
+            className="text-primary-foreground animate-fade-in-up flex flex-col gap-8 order-2 md:order-1"
+            style={{ maxWidth: "460px" }}
           >
             <h1
-              className="text-4xl md:text-[56px] font-extrabold tracking-tight"
+              className="text-4xl md:text-[52px] font-extrabold tracking-tight"
               style={{ lineHeight: 1.1 }}
             >
               {t("hero.title1")}
@@ -30,11 +30,11 @@ const HeroSection = () => {
             </h1>
             <p
               className="opacity-80 leading-relaxed"
-              style={{ maxWidth: "460px", fontSize: "17px" }}
+              style={{ maxWidth: "420px", fontSize: "17px" }}
             >
               {t("hero.subtitle")}
             </p>
-            <div className="pt-1">
+            <div className="pt-2">
               <a
                 href="https://wa.me/50766778280"
                 target="_blank"
@@ -55,14 +55,30 @@ const HeroSection = () => {
             </div>
           </div>
 
-          {/* Mascot with glow + shadow */}
-          <div className="flex justify-center items-center order-1 md:order-2">
+          {/* Mascot */}
+          <div className="relative flex justify-center items-center order-1 md:order-2 md:-mr-4">
+            {/* Glow */}
+            <div
+              className="absolute pointer-events-none"
+              style={{
+                width: "60%",
+                height: "60%",
+                top: "50%",
+                left: "50%",
+                transform: "translate(-50%, -50%)",
+                borderRadius: "50%",
+                background: "radial-gradient(circle, rgba(250,204,21,0.15) 0%, rgba(59,130,246,0.10) 50%, transparent 80%)",
+                filter: "blur(50px)",
+              }}
+            />
             <img
               src={heroImage}
               alt="Mascote LanguageNow - Escola internacional de idiomas no Panamá"
-              className="object-contain w-[70%] md:w-full"
+              className="relative z-10 object-contain w-[75%] md:w-full lg:scale-[1.35]"
               style={{
-                maxHeight: "520px",
+                maxWidth: "100%",
+                height: "auto",
+                maxHeight: "560px",
               }}
             />
           </div>
