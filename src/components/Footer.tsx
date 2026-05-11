@@ -17,7 +17,7 @@ const Footer = () => {
       <footer className="bg-foreground text-background/80 py-12">
         <div className="container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           <div>
-            <img src={logoWhite} alt="LanguageNow!" className="h-10 md:h-12 w-auto mb-3" />
+            <img src={logo} alt="LanguageNow!" className="h-10 md:h-12 w-auto mb-3" />
             <p className="text-sm opacity-70">{t("footer.desc")}</p>
           </div>
           <div>
