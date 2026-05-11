@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Menu, X, Globe } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 import type { Lang } from "@/i18n/translations";
-import logo from "@/assets/logo.webp";
+import logo from "@/assets/logo.png";
 
 const navKeys = [
   { key: "nav.inicio", href: "#inicio" },
@@ -54,7 +54,7 @@ const Navbar = () => {
             src={logo}
             alt="LanguageNow!"
             className="w-auto max-w-none"
-            style={{ height: "clamp(50px, 6.5vw, 65px)", maxHeight: "none", width: "auto" }}
+            style={{ height: "clamp(70px, 9vw, 95px)", maxHeight: "none", width: "auto" }}
           />
         </a>
 
