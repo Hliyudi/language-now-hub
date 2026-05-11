@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import logoWhite from "@/assets/logo-white.webp";
+import logo from "@/assets/logo.png";
 
 const Footer = () => {
   const { t } = useLanguage();
