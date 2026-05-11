@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import logoWhite from "@/assets/logo-white.webp";
+import logo from "@/assets/logo.png";
 
 const Footer = () => {
   const { t } = useLanguage();
@@ -17,7 +17,7 @@ const Footer = () => {
       <footer className="bg-foreground text-background/80 py-12">
         <div className="container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           <div>
-            <img src={logoWhite} alt="LanguageNow!" className="h-10 md:h-12 w-auto mb-3" />
+            <img src={logo} alt="LanguageNow!" className="h-10 md:h-12 w-auto mb-3" />
             <p className="text-sm opacity-70">{t("footer.desc")}</p>
           </div>
           <div>
