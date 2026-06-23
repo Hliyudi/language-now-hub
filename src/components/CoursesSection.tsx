@@ -19,14 +19,13 @@ const CoursesSection = () => {
     { key: "runs", icon: GraduationCap, age: "14–16", color: "from-rose-400 to-rose-600" },
   ];
 
-  const tabs: { key: Tab; emoji: string; labelKey: string; comingSoon?: boolean }[] = [
+  const tabs: { key: Tab; emoji: string; labelKey: string }[] = [
     { key: "english", emoji: "🇺🇸", labelKey: "courses.tab.english" },
     { key: "mandarin", emoji: "🇨🇳", labelKey: "courses.tab.mandarin" },
-    { key: "portuguese", emoji: "🇧🇷", labelKey: "courses.tab.portuguese", comingSoon: true },
+    { key: "portuguese", emoji: "🇧🇷", labelKey: "courses.tab.portuguese" },
   ];
 
   const handleTabClick = (tab: Tab) => {
-    if (tab === "portuguese") return;
     setActiveTab(tab);
   };
 
@@ -47,28 +46,16 @@ const CoursesSection = () => {
         <div className="flex flex-wrap justify-center gap-3 mb-8">
           {tabs.map((tab) => (
             <div key={tab.key} className="relative">
-              {tab.comingSoon ? (
-                <div
-                  className="relative px-11 py-6 rounded-xl font-bold text-lg bg-card text-muted-foreground/40 border-2 border-dashed border-border cursor-not-allowed opacity-70 select-none"
-                >
-                  <span className="absolute -top-2.5 left-1/2 -translate-x-1/2 bg-accent text-accent-foreground text-[10px] font-bold px-2.5 py-0.5 rounded-full flex items-center gap-1 whitespace-nowrap">
-                    <Clock size={10} />
-                    {t("courses.tab.comingSoon")}
-                  </span>
-                  {tab.emoji} {t(tab.labelKey)}
-                </div>
-              ) : (
-                <button
-                  onClick={() => handleTabClick(tab.key)}
-                  className={`px-11 py-6 rounded-xl font-bold text-lg transition-all ${
-                    activeTab === tab.key
-                      ? "bg-primary text-primary-foreground shadow-lg shadow-primary/25 scale-[1.02]"
-                      : "bg-card text-muted-foreground border-2 border-border hover:border-primary/40 hover:shadow-md"
-                  }`}
-                >
-                  {tab.emoji} {t(tab.labelKey)}
-                </button>
-              )}
+              <button
+                onClick={() => handleTabClick(tab.key)}
+                className={`px-11 py-6 rounded-xl font-bold text-lg transition-all ${
+                  activeTab === tab.key
+                    ? "bg-primary text-primary-foreground shadow-lg shadow-primary/25 scale-[1.02]"
+                    : "bg-card text-muted-foreground border-2 border-border hover:border-primary/40 hover:shadow-md"
+                }`}
+              >
+                {tab.emoji} {t(tab.labelKey)}
+              </button>
             </div>
           ))}
         </div>
@@ -216,6 +203,52 @@ const CoursesSection = () => {
                 </div>
                 <div className="text-center">
                   <a href="#contato" className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-lg font-semibold text-sm hover:opacity-90 transition-opacity">
+                    {t("courses.cta.start")} <ArrowRight size={16} />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* Portuguese Content */}
+        {activeTab === "portuguese" && (
+          <div className="animate-fade-in">
+            <div className="bg-card rounded-2xl border border-border shadow-sm overflow-hidden">
+              <div className="bg-gradient-to-br from-emerald-600 to-emerald-800 p-8 text-center">
+                <span className="text-5xl">🇧🇷</span>
+                <h3 className="text-2xl font-bold mt-3 text-white">{t("port.adults.title")}</h3>
+                <p className="text-emerald-100 mt-2 text-sm max-w-lg mx-auto">{t("port.adults.tagline")}</p>
+              </div>
+              <div className="p-6 md:p-8 space-y-6">
+                <p className="text-muted-foreground leading-relaxed">{t("port.adults.desc")}</p>
+                <div className="grid sm:grid-cols-2 gap-4">
+                  {[1, 2, 3, 4].map((i) => (
+                    <div key={i} className="flex items-start gap-3 p-3 rounded-lg bg-muted/50">
+                      <Star size={18} className="text-primary mt-0.5 shrink-0" />
+                      <div>
+                        <span className="font-semibold text-sm">{t(`port.adults.feat${i}.title`)}</span>
+                        <p className="text-xs text-muted-foreground mt-0.5">{t(`port.adults.feat${i}.desc`)}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+                <div className="bg-muted/30 rounded-xl p-5 border border-border">
+                  <h4 className="font-bold text-sm mb-3 flex items-center gap-2">
+                    <GraduationCap size={16} className="text-primary" />
+                    {t("port.adults.results.title")}
+                  </h4>
+                  <div className="grid sm:grid-cols-2 gap-2">
+                    {[1, 2, 3, 4, 5].map((i) => (
+                      <p key={i} className="text-sm text-muted-foreground flex items-start gap-2">
+                        <CheckCircle2 size={16} className="text-primary mt-0.5 shrink-0" strokeWidth={2} />
+                        <span>{t(`port.adults.result${i}`)}</span>
+                      </p>
+                    ))}
+                  </div>
+                </div>
+                <div className="text-center">
+                  <a href={whatsappPortuguese} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-lg font-semibold text-sm hover:opacity-90 transition-opacity">
                     {t("courses.cta.start")} <ArrowRight size={16} />
                   </a>
                 </div>
