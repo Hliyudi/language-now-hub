@@ -53,6 +53,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     "courses.tab.mandarin": "Mandarim",
     "courses.sub.adults": "Adultos",
     "courses.sub.kids": "Kids & Teens",
+    "courses.sub.specializations": "Especializações",
     "courses.cta.start": "Comece sua jornada",
     "courses.cta.info": "Saiba mais",
 
