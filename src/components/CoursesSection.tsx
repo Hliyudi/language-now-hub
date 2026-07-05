@@ -4,7 +4,7 @@ import { useLanguage } from "@/i18n/LanguageContext";
 import { GraduationCap, Star, ArrowRight, Baby, Footprints, PersonStanding, Clock, CheckCircle2, BookOpen, Target, TrendingUp } from "lucide-react";
 
 type Tab = "english" | "mandarin" | "portuguese";
-type SubTab = "adults" | "kids";
+type SubTab = "adults" | "kids" | "specializations";
 
 const CoursesSection = () => {
   const ref = useScrollAnimation();
@@ -64,7 +64,7 @@ const CoursesSection = () => {
         {activeTab === "english" && (
           <div className="space-y-8 animate-fade-in">
             <div className="flex justify-center gap-2">
-              {(["adults", "kids"] as SubTab[]).map((sub) => (
+              {(["adults", "kids", "specializations"] as SubTab[]).map((sub) => (
                 <button
                   key={sub}
                   onClick={() => setActiveSubTab(sub)}
@@ -74,7 +74,7 @@ const CoursesSection = () => {
                       : "text-muted-foreground hover:text-foreground"
                   }`}
                 >
-                  {sub === "adults" ? t("courses.sub.adults") : t("courses.sub.kids")}
+                  {sub === "adults" ? t("courses.sub.adults") : sub === "kids" ? t("courses.sub.kids") : t("courses.sub.specializations")}
                 </button>
               ))}
             </div>
@@ -159,6 +159,66 @@ const CoursesSection = () => {
                   <a href="#contato" className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-lg font-semibold text-sm hover:opacity-90 transition-opacity">
                     {t("courses.cta.info")} <ArrowRight size={16} />
                   </a>
+                </div>
+              </div>
+            )}
+
+            {activeSubTab === "specializations" && (
+              <div className="bg-card rounded-2xl border border-border shadow-sm overflow-hidden animate-fade-in">
+                <div className="bg-gradient-to-br from-blue-500 to-blue-700 p-8 text-center">
+                  <span className="text-5xl">🇺🇸</span>
+                  <h3 className="text-2xl font-bold mt-3 text-white">{t("eng.special.title")}</h3>
+                  <p className="text-blue-100 mt-2 text-sm max-w-lg mx-auto">{t("eng.special.tagline")}</p>
+                </div>
+                <div className="p-6 md:p-8 space-y-6">
+                  <p className="text-muted-foreground leading-relaxed">{t("eng.special.desc")}</p>
+                  <div className="grid sm:grid-cols-2 gap-4">
+                    {[1, 2].map((i) => (
+                      <div key={i} className="flex items-start gap-3 p-3 rounded-lg bg-muted/50">
+                        <Star size={18} className="text-primary mt-0.5 shrink-0" />
+                        <div>
+                          <span className="font-semibold text-sm">{t(`eng.special.feat${i}.title`)}</span>
+                          <p className="text-xs text-muted-foreground mt-0.5">{t(`eng.special.feat${i}.desc`)}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                  <div className="bg-muted/30 rounded-xl p-5 border border-border">
+                    <h4 className="font-bold text-sm mb-3 flex items-center gap-2">
+                      <GraduationCap size={16} className="text-primary" />
+                      {t("eng.special.results.title")}
+                    </h4>
+                    <div className="grid sm:grid-cols-2 gap-2">
+                      {[1, 2, 3, 4, 5].map((i) => (
+                        <p key={i} className="text-sm text-muted-foreground flex items-start gap-2">
+                          <CheckCircle2 size={16} className="text-primary mt-0.5 shrink-0" strokeWidth={2} />
+                          <span>{t(`eng.special.result${i}`)}</span>
+                        </p>
+                      ))}
+                    </div>
+                  </div>
+                  <div className="bg-muted/30 rounded-xl p-5 border border-border">
+                    <h4 className="font-bold text-sm mb-3 flex items-center gap-2">
+                      <Star size={16} className="text-primary" />
+                      {t("eng.special.specializations.title")}
+                    </h4>
+                    <div className="grid sm:grid-cols-2 gap-4">
+                      {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((i) => (
+                        <div key={i} className="flex items-start gap-3 p-3 rounded-lg bg-muted/50">
+                          <Star size={18} className="text-primary mt-0.5 shrink-0" />
+                          <div>
+                            <span className="font-semibold text-sm">{t(`eng.special.spec${i}.title`)}</span>
+                            <p className="text-xs text-muted-foreground mt-0.5">{t(`eng.special.spec${i}.desc`)}</p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                  <div className="text-center">
+                    <a href="#contato" className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-lg font-semibold text-sm hover:opacity-90 transition-opacity">
+                      {t("courses.cta.start")} <ArrowRight size={16} />
+                    </a>
+                  </div>
                 </div>
               </div>
             )}
