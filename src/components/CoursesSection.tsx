@@ -64,7 +64,7 @@ const CoursesSection = () => {
         {activeTab === "english" && (
           <div className="space-y-8 animate-fade-in">
             <div className="flex justify-center gap-2">
-              {(["adults", "kids"] as SubTab[]).map((sub) => (
+              {(["adults", "kids", "specializations"] as SubTab[]).map((sub) => (
                 <button
                   key={sub}
                   onClick={() => setActiveSubTab(sub)}
@@ -74,7 +74,7 @@ const CoursesSection = () => {
                       : "text-muted-foreground hover:text-foreground"
                   }`}
                 >
-                  {sub === "adults" ? t("courses.sub.adults") : t("courses.sub.kids")}
+                  {sub === "adults" ? t("courses.sub.adults") : sub === "kids" ? t("courses.sub.kids") : t("courses.sub.specializations")}
                 </button>
               ))}
             </div>
