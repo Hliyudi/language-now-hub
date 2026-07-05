@@ -4,7 +4,7 @@ import { useLanguage } from "@/i18n/LanguageContext";
 import { GraduationCap, Star, ArrowRight, Baby, Footprints, PersonStanding, Clock, CheckCircle2, BookOpen, Target, TrendingUp } from "lucide-react";
 
 type Tab = "english" | "mandarin" | "portuguese";
-type SubTab = "adults" | "kids";
+type SubTab = "adults" | "kids" | "specializations";
 
 const CoursesSection = () => {
   const ref = useScrollAnimation();
