@@ -313,6 +313,7 @@ export const translations: Record<Lang, Record<string, string>> = {
     "courses.tab.mandarin": "Mandarin",
     "courses.sub.adults": "Adults",
     "courses.sub.kids": "Kids & Teens",
+    "courses.sub.specializations": "Specializations",
     "courses.cta.start": "Start your journey",
     "courses.cta.info": "Learn more",
 
