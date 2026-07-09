@@ -23,6 +23,7 @@ const CoursesSection = () => {
     { key: "english", emoji: "🇺🇸", labelKey: "courses.tab.english" },
     { key: "mandarin", emoji: "🇨🇳", labelKey: "courses.tab.mandarin" },
     { key: "portuguese", emoji: "🇧🇷", labelKey: "courses.tab.portuguese" },
+    { key: "spanish", emoji: "🇪🇸", labelKey: "courses.tab.spanish" },
   ];
 
   const handleTabClick = (tab: Tab) => {
