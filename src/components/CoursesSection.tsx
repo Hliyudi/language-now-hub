@@ -3,7 +3,7 @@ import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { GraduationCap, Star, ArrowRight, Baby, Footprints, PersonStanding, Clock, CheckCircle2, BookOpen, Target, TrendingUp } from "lucide-react";
 
-type Tab = "english" | "mandarin" | "portuguese";
+type Tab = "english" | "mandarin" | "portuguese" | "spanish";
 type SubTab = "adults" | "kids" | "specializations";
 
 const CoursesSection = () => {
