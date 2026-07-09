@@ -55,7 +55,7 @@ const CoursesSection = () => {
                     : "bg-card text-muted-foreground border-2 border-border hover:border-primary/40 hover:shadow-md"
                 }`}
               >
-                {tab.emoji} {t(tab.labelKey)}
+                {tab.emoji} {t(tab.labelKey)} {tab.key === "spanish" && <span className="ml-2 inline-flex items-center px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide rounded-full bg-amber-100 text-amber-700 border border-amber-200">{t("courses.tab.comingSoon")}</span>}
               </button>
             </div>
           ))}
