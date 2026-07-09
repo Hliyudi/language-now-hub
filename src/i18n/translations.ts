@@ -236,6 +236,12 @@ export const translations: Record<Lang, Record<string, string>> = {
     "courses.tab.comingSoon": "Em breve",
     "courses.pt.wa.message": "Olá! Gostaria de saber sobre o curso de português.",
 
+    // Courses – Spanish (Coming Soon)
+    "courses.tab.spanish": "Espanhol",
+    "courses.spanish.title": "Espanhol — Em breve",
+    "courses.spanish.message": "O programa de espanhol está chegando em breve. Estamos preparando uma experiência de aprendizado profissional e imersiva para alunos que desejam fluência real no espanhol.",
+    "courses.spanish.subtitle": "Fique atento às novidades.",
+
     // Privacy Policy
     "privacy.intro.title": "1. Introdução",
     "privacy.intro.text": "A LanguageNow! valoriza a sua privacidade. Esta política descreve como coletamos, usamos e protegemos suas informações pessoais ao utilizar nosso site e serviços.",
