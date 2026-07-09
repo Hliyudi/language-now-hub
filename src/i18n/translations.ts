@@ -496,6 +496,12 @@ export const translations: Record<Lang, Record<string, string>> = {
     "courses.tab.comingSoon": "Coming soon",
     "courses.pt.wa.message": "Hi! I'd like to know about the Portuguese course.",
 
+    // Courses – Spanish (Coming Soon)
+    "courses.tab.spanish": "Spanish",
+    "courses.spanish.title": "Spanish — Coming Soon",
+    "courses.spanish.message": "Spanish program coming soon. We are preparing a professional and immersive learning experience for students who want real-world fluency in Spanish.",
+    "courses.spanish.subtitle": "Stay tuned for updates.",
+
     "privacy.intro.title": "1. Introduction",
     "privacy.intro.text": "LanguageNow! values your privacy. This policy describes how we collect, use and protect your personal information when using our website and services.",
     "privacy.collect.title": "2. Information Collected",
