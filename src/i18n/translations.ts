@@ -236,6 +236,12 @@ export const translations: Record<Lang, Record<string, string>> = {
     "courses.tab.comingSoon": "Em breve",
     "courses.pt.wa.message": "Olá! Gostaria de saber sobre o curso de português.",
 
+    // Courses – Spanish (Coming Soon)
+    "courses.tab.spanish": "Espanhol",
+    "courses.spanish.title": "Espanhol — Em breve",
+    "courses.spanish.message": "O programa de espanhol está chegando em breve. Estamos preparando uma experiência de aprendizado profissional e imersiva para alunos que desejam fluência real no espanhol.",
+    "courses.spanish.subtitle": "Fique atento às novidades.",
+
     // Privacy Policy
     "privacy.intro.title": "1. Introdução",
     "privacy.intro.text": "A LanguageNow! valoriza a sua privacidade. Esta política descreve como coletamos, usamos e protegemos suas informações pessoais ao utilizar nosso site e serviços.",
@@ -490,6 +496,12 @@ export const translations: Record<Lang, Record<string, string>> = {
     "courses.tab.comingSoon": "Coming soon",
     "courses.pt.wa.message": "Hi! I'd like to know about the Portuguese course.",
 
+    // Courses – Spanish (Coming Soon)
+    "courses.tab.spanish": "Spanish",
+    "courses.spanish.title": "Spanish — Coming Soon",
+    "courses.spanish.message": "Spanish program coming soon. We are preparing a professional and immersive learning experience for students who want real-world fluency in Spanish.",
+    "courses.spanish.subtitle": "Stay tuned for updates.",
+
     "privacy.intro.title": "1. Introduction",
     "privacy.intro.text": "LanguageNow! values your privacy. This policy describes how we collect, use and protect your personal information when using our website and services.",
     "privacy.collect.title": "2. Information Collected",
@@ -741,6 +753,12 @@ export const translations: Record<Lang, Record<string, string>> = {
     "courses.tab.portuguese": "Portugués",
     "courses.tab.comingSoon": "Próximamente",
     "courses.pt.wa.message": "¡Hola! Me gustaría saber sobre el curso de portugués.",
+
+    // Courses – Spanish (Coming Soon)
+    "courses.tab.spanish": "Español",
+    "courses.spanish.title": "Español — Próximamente",
+    "courses.spanish.message": "El programa de español estará disponible próximamente. Estamos preparando una experiencia de aprendizaje profesional e inmersiva para estudiantes que buscan fluidez real en español.",
+    "courses.spanish.subtitle": "Mantente atento a las actualizaciones.",
 
     "privacy.intro.title": "1. Introducción",
     "privacy.intro.text": "LanguageNow! valora tu privacidad. Esta política describe cómo recopilamos, usamos y protegemos tu información personal al utilizar nuestro sitio web y servicios.",

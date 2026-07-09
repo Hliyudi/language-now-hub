@@ -3,7 +3,7 @@ import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { GraduationCap, Star, ArrowRight, Baby, Footprints, PersonStanding, Clock, CheckCircle2, BookOpen, Target, TrendingUp } from "lucide-react";
 
-type Tab = "english" | "mandarin" | "portuguese";
+type Tab = "english" | "mandarin" | "portuguese" | "spanish";
 type SubTab = "adults" | "kids" | "specializations";
 
 const CoursesSection = () => {
@@ -23,6 +23,7 @@ const CoursesSection = () => {
     { key: "english", emoji: "🇺🇸", labelKey: "courses.tab.english" },
     { key: "mandarin", emoji: "🇨🇳", labelKey: "courses.tab.mandarin" },
     { key: "portuguese", emoji: "🇧🇷", labelKey: "courses.tab.portuguese" },
+    { key: "spanish", emoji: "🇪🇸", labelKey: "courses.tab.spanish" },
   ];
 
   const handleTabClick = (tab: Tab) => {
@@ -54,7 +55,7 @@ const CoursesSection = () => {
                     : "bg-card text-muted-foreground border-2 border-border hover:border-primary/40 hover:shadow-md"
                 }`}
               >
-                {tab.emoji} {t(tab.labelKey)}
+                {tab.emoji} {t(tab.labelKey)} {tab.key === "spanish" && <span className="ml-2 inline-flex items-center px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide rounded-full bg-amber-100 text-amber-700 border border-amber-200">{t("courses.tab.comingSoon")}</span>}
               </button>
             </div>
           ))}
@@ -311,6 +312,24 @@ const CoursesSection = () => {
                   <a href={whatsappPortuguese} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-lg font-semibold text-sm hover:opacity-90 transition-opacity">
                     {t("courses.cta.start")} <ArrowRight size={16} />
                   </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* Spanish Content — Coming Soon */}
+        {activeTab === "spanish" && (
+          <div className="animate-fade-in">
+            <div className="bg-card rounded-2xl border border-border shadow-sm overflow-hidden">
+              <div className="bg-gradient-to-br from-amber-500 to-amber-700 p-8 text-center">
+                <span className="text-5xl">🇪🇸</span>
+                <h3 className="text-2xl font-bold mt-3 text-white">{t("courses.spanish.title")}</h3>
+              </div>
+              <div className="p-6 md:p-8">
+                <div className="max-w-2xl mx-auto space-y-3 text-center">
+                  <p className="text-muted-foreground leading-relaxed">{t("courses.spanish.message")}</p>
+                  <p className="text-sm text-muted-foreground">{t("courses.spanish.subtitle")}</p>
                 </div>
               </div>
             </div>
