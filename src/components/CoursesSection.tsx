@@ -317,6 +317,24 @@ const CoursesSection = () => {
             </div>
           </div>
         )}
+
+        {/* Spanish Content — Coming Soon */}
+        {activeTab === "spanish" && (
+          <div className="animate-fade-in">
+            <div className="bg-card rounded-2xl border border-border shadow-sm overflow-hidden">
+              <div className="bg-gradient-to-br from-amber-500 to-amber-700 p-8 text-center">
+                <span className="text-5xl">🇪🇸</span>
+                <h3 className="text-2xl font-bold mt-3 text-white">{t("courses.spanish.title")}</h3>
+              </div>
+              <div className="p-6 md:p-8">
+                <div className="max-w-2xl mx-auto space-y-3 text-center">
+                  <p className="text-muted-foreground leading-relaxed">{t("courses.spanish.message")}</p>
+                  <p className="text-sm text-muted-foreground">{t("courses.spanish.subtitle")}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </section>
   );
